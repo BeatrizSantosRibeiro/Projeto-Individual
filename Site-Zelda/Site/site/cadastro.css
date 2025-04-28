@@ -1,0 +1,28 @@
+body{
+    background: url(https://images6.alphacoders.com/808/808607.jpg);
+    background-size: cover;
+    
+
+}
+
+
+
+*{
+    border:0;
+    padding: 0;
+}
+
+#logo {
+    height: 201px;
+    width: 125px;
+    align-items: flex-start;
+    padding-right: 50px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+#botãologo{
+    all:unset;
+    
+}
+
