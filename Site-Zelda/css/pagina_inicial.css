@@ -1,5 +1,5 @@
 body {
-    /* background-image: url(../Imagens/fundo1-paginainicial.jpg); */
+    background-image: url(../Imagens/fundo1-paginainicial.jpg); 
     background-size: cover;
 
 }
@@ -40,6 +40,11 @@ a:hover {
 #botãologo {
     all: unset;
 
+}
+
+#logo:hover {
+    content: url(../Imagens/logobotaohover.png);
+    
 }
 
 
