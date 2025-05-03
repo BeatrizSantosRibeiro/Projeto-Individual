@@ -1,0 +1,78 @@
+body {
+    background: url(../Imagens/fundo2-cadastro.jpg);
+    background-size: cover;
+    background-position-y: -30px;
+    background-size: 100% 114vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#logo {
+    height: 185px;
+    width: 115px;
+    align-items: flex-start;
+    padding-right: 50px;
+    padding-left: 8px;
+    padding-top: 80px;
+    cursor: pointer;
+
+}
+
+#botãologo {
+    all: unset;
+
+}
+
+.navbar {
+    /* margin:-25px; */
+    /* position: fixed; */
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    /* z-index: 1000; */
+}
+
+
+.navbar li {
+    margin-top: 32px;
+    letter-spacing: 3px;
+    list-style: none;
+}
+
+
+.navbar li a {
+    padding: 60px;
+    padding-top: 44px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    opacity: 0%;
+    width: 700px;
+    height: 539px;
+    align-content: center;
+    /* padding: 105px; */
+    margin-left: 27%;
+
+}
+
+.p {
+    display: flex;
+    color: white;
+    font-size: 40px;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 55px;
+    
+}
