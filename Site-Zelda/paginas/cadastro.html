@@ -21,22 +21,22 @@
 
     <div class="logo_aaa"><img src="../Imagens/logobotao.png" id="logo" onclick="botãologo()"></div>
 
-<div class="nav">
-    <div class="nav2">
-        <div class="nav1">
-    <li>
-        <a href="login.html"> Entrar
-            <a href="../paginas/cadastro2.html"> Cadastrar
-                <a href="sobre.html" id="">Sobre</a>
-    </li>
+    <div class="nav">
+        <div class="nav2">
+            <div class="nav1">
+                <li>
+                    <a href="login.html"> Entrar
+                        <a href="../paginas/cadastro2.html"> Cadastrar
+                            <a href="sobre.html" id="">Sobre</a>
+                </li>
 
-</div>
-
-
+            </div>
 
 
-<br><br><br>
-    <div class="texto"> Cadastrar </div>
+
+
+            <br><br><br>
+            <!-- <div class="texto"> Cadastrar </div>
     
 
 
@@ -44,7 +44,7 @@
         <div class="caixa1">
             <div id="inputs">
                 <br>
-                <div id='p'> Nome: <br><input type="text" id="input_nome"> <br>
+                         Nome: <br><input type="text" id="input_nome"> <br>
                     <br> Email: <br><input type="text" id="input_email"> <br>
                     <br> Telefone: <br><input type="text" id="input_telefone"> <br>
                     <br> Senha: <br><input type="text" id="input_senha"> <br>
@@ -56,10 +56,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
+    <div id="bloco">
+            <div class="container">
+                <div class="texto">
 
+                   <center> <h2> Cadastrar </h2> </center>
+                    Nome: <input type="text" id="input_nome">
+                    Email: <input type="text" id="input_email">
+                    Telefone: <input type="text" id="input_telefone">
+                    Senha: <input type="text" id="input_senha">
+                    Confirmação de senha: <input type="text" id="input_confirsenha">
+                    <br>
+                    <button onclick="Finalizar()" id="button_finalizar"> Finalizar </button>
+
+                    <div id="div_mensagem"></div>
+
+                </div>
+            </div>
+        </div>
 
 
 </html>
