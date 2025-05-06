@@ -19,46 +19,44 @@
 
 
 
-    <div class="caixadanav"> 
-        
-        <img src="../Imagens/logobotao.png" id="logo" onclick="botãologo()">
-        <li>
-        <a href="login.html"> Entrar </a>
-        <a href="../paginas/cadastro2.html"> Cadastrar </a>
-        <a href="sobre.html" id="">Sobre</a></li>
-        
-        
-        <div class="caixabemvindo"> 
-        bem vindo
-    </div>
-</div></img>
-    <!-- <div class="container"> -->
-        <div class="texto">  Cadastrar   </div>
-        <br>
-            <div id="inputs">
-                <br> <div id='p' > Nome: <br><input type="text" id="input_nome"> <br>
-                <br>  Email: <br><input type="text" id="input_email"> <br>
-                <br>  Telefone: <br><input type="text" id="input_telefone"> <br>
-                <br>  Senha: <br><input type="text" id="input_senha"> <br>
-                <br>  Confirmação de senha: <br><input type="text" id="input_confirsenha"> <br>
-               <br>
-                <button onclick="Finalizar()" id="button_finalizar"> Finalizar </button>
-                
-        </div>
-    </div>
-       
-        
-        <div class="caixa2">
-           
-        <div class="caixa1"> 
-            
-         
-        </div>
+    <div class="logo_aaa"><img src="../Imagens/logobotao.png" id="logo" onclick="botãologo()"></div>
+
+<div class="nav">
+    <div class="nav2">
+        <div class="nav1">
+    <li>
+        <a href="login.html"> Entrar
+            <a href="../paginas/cadastro2.html"> Cadastrar
+                <a href="sobre.html" id="">Sobre</a>
+    </li>
+
 </div>
 
 
-    <!-- </div> -->
 
+
+<br><br><br>
+    <div class="texto"> Cadastrar </div>
+    
+
+
+    <div class="caixa2">
+        <div class="caixa1">
+            <div id="inputs">
+                <br>
+                <div id='p'> Nome: <br><input type="text" id="input_nome"> <br>
+                    <br> Email: <br><input type="text" id="input_email"> <br>
+                    <br> Telefone: <br><input type="text" id="input_telefone"> <br>
+                    <br> Senha: <br><input type="text" id="input_senha"> <br>
+                    <br> Confirmação de senha: <br><input type="text" id="input_confirsenha"> <br>
+                    <br><br>
+                    <button onclick="Finalizar()" id="button_finalizar"> Finalizar </button>
+
+                    <div id="div_mensagem"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -68,9 +66,32 @@
 </body>
 
 <script>
+
     function botãologo() {
         window.location.href = "pagina_inicial.html";
 
+    }
+
+
+    function Finalizar() {
+
+        var nome = input_nome.value;
+        var email = input_email.value;
+        var telefone = Number(input_telefone.value);
+        var senha = input_senha.value;
+        var Confirmação = input_confirsenha.value;
+
+        if ((nome == "") || (email == "") || (telefone == "") || (senha == "") || (Confirmação == "")) {
+            alert('Por favor preecha todos os itens');
+        }
+
+        else if (senha != confirmação) {
+            alert('Erro de confirmação de senha');
+        }
+
+        else {
+            div_mensagem.innerHTML = 'cadastro realizado';
+        }
 
     }
 

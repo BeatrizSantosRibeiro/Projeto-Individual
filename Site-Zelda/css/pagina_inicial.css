@@ -22,8 +22,7 @@ a {
 }
 
 a:hover {
-    color: rgb(165, 187, 246);
-
+    color: rgb(170, 193, 255);
 }
 
 
@@ -64,8 +63,8 @@ li {
     align-items: flex-start;
     flex-direction: row;
     padding: 60px;
-
 }
+
 
 p a {
     display: flex;
@@ -74,6 +73,7 @@ p a {
     font-size: 24px;
     color: rgb(0, 0, 0);
 }
+
 
 #zeldalogo {
 
