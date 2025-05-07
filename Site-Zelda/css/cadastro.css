@@ -9,94 +9,36 @@ body {
     
 }
 
-/* 
-.caixa1 {
-    display: flex;
-    position: relative; 
-    width: 575px;
-    height: 583px;
-    top: 33px;
-    left: 58px;
-    background-color: rgb(0, 0, 0);
-    opacity: 100%;
-    border: 2px solid;
-    border-color: white;
-   z-index: 2;
-}
-
-
-.caixa2 {
-    position: absolute;
-    width: 690px;
-    height: 653px;
-    top: 21px; 
-    left: 789px;
-    background-color: rgb(38, 38, 38);
-    opacity: 60%;
-    color: rgb(123, 29, 29);
-    font-size: 40px;
-    z-index: 1;
-    border: 3px solid;
-    border-color: white;
-} 
-
-.texto{
-   display: flex;
-   font-size: 40px;
-   margin-left: 887px;
-   margin-top: -100px;
-   color:white;
-   position: sticky;
-   z-index: 6;
-} 
-
-#inputs{  
-    position:relative;
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 50px;
-    margin-top: 128px;
-    z-index: 7;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    
-}
-
-#input_nome, #input_email, #input_telefone, #input_senha, #input_confirsenha{
-    width: 460px;
-    height: 23px;
-   
-} */
-
-
 
 #button_finalizar {
     position: relative;
-    width: 70px;
+    width: 97px;
     height: 40px;
-    margin-left: 44%;
+    margin-left: 40%;
     background-color: rgb(24, 97, 142);
     border-radius: 10%;
-    z-index: 6;
+    z-index: 1000;
+    margin-top: 12px;
 }
 
 #button_finalizar:hover{
-    background-color: rgb(14, 62, 92);
+    background-color: rgb(74, 91, 139);
+    border-radius: 0% ;
+    /* margin-left: 39%; */
 }
-
-/* fim da caixa 2 */
-
 
 
 a{
-    padding: 47px;
+    padding: 59px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 26px;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+   
 } 
 
 
 #logo{
+    
     height: 185px;
     width: 115px;
     align-items: flex-start;
@@ -112,19 +54,21 @@ a{
     all: unset;
 }
 
+
 .nav{
     display: flex;
-    margin-top: -130px;
+    margin-top: -142px;
     justify-content: space-between;
     margin-left: 170px;
-    word-spacing: 20px;
     font-size: 28px;
     font-family: 'triforce';
     letter-spacing: 3px;
-    background-color:aquamarine ;
+    background-color: none;
     width: 80%;
     height: 40px;
+    list-style: none;
 }
+
 
 .logo_aaa{
     margin-top: -108px;
@@ -133,40 +77,115 @@ a{
 
 
 #logo:hover {
-    content: url(../Imagens/logobotaohover.png);
-    
+    content: url(../Imagens/logobotaohover.png);  
 }
 
 
 a:hover {
     color: rgb(170, 193, 255);
+
 }
 
-#bloco{
-    margin-left: 300px;
-    height: 100px;
-    width: ;
+#agora{
+   
+    color:rgb(170, 193, 255);
+
 }
 
 
-.container{
+.container input,.text{
     justify-content: center;
     display: flex;
     /* height: 555px; */
-    margin-top: -05px;
-    width: 578px;
-    height: 540px;
-    background-color: rgb(17, 77, 161);
+    width: 517px;
+    height: 510px;
+    background-color: rgb(0, 0, 0);
+    opacity: 70%;
+    border-radius: 13px;
+    color:rgb(255, 255, 255);
 }
 
+
 input, .texto {
+    opacity: 100%;
+    position: relative;
+    z-index: 1000;
     /* background: rgb(255, 255, 255, .2); */
     display: flex;
     height: 30px;
     flex-direction: column;
     width: 400px;
     height: 420px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    margin-left: 11px;
+     
+}
+input{
+    font-size: 17px;
+}
+
+h2{
+    margin-left: 138px;
+    letter-spacing: 5px;
+    font-family:sans-serif
 }
 
 
+#bloco{
+    background-color: black ;
+    opacity: 80%;
+    position: relative;
+    z-index: 1;
+    width: 565px;
+    height: 555px;
+    margin-left: 330px;
+    margin-top: -54px;
+    border-radius: 1px;
+    border:solid;
+    border-color: white ;
+}
 
+
+#input_nome:hover{
+    border-radius: 20%;
+    border-radius: 63;
+    border-color: rgb(149, 177, 255);
+}
+
+
+#input_email:hover{
+    border-radius: 20%;
+    border-radius: 63;
+    border-color: rgb(149, 177, 255);
+}
+
+
+#input_telefone:hover{
+    border-radius: 20%;
+    border-radius: 63;
+    border-color: rgb(149, 177, 255);
+}
+
+
+#input_senha:hover{
+    border-radius: 20%;
+    border-radius: 63;
+    border-color: rgb(149, 177, 255);
+}
+
+
+ #input_confirsenha:hover{
+    border-radius: 20%;
+    border-radius: 63;
+    border-color: rgb(149, 177, 255);
+}
+
+#div_mensagem {
+    margin-top: 9px;
+    color:rgb(59, 169, 237);
+    font-size: 21px;
+    margin-left: 9px;
+   
+}
