@@ -1,0 +1,132 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(29, 29, 29);
+}
+
+.logo_aaa{
+    
+    position: relative;
+    margin-top: -56px;
+    margin-left: 354px;
+    /* background-color: rgb(234, 176, 77); */
+    z-index: 1000;
+    
+}
+ 
+#logo{
+    position: fixed;
+    height: 185px;
+    width: 115px;
+    align-items: flex-start;
+    cursor: pointer;    
+   
+}
+
+
+#botãologo {
+    /* padding-top: -100px; */
+    all: unset;
+}
+
+
+#logo:hover {
+    content: url(../Imagens/logobotaohover.png);  
+}
+
+
+.nav{
+    position: relative;
+    display: flex;
+    margin-top: -629px;
+    margin-left: -344px;
+    justify-content: space-between;
+    font-size: 28px;
+    font-family: 'triforce';
+    letter-spacing: 3px;
+    background-color: none;
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    z-index: 1000;
+
+    
+}
+
+#fixar_nav{
+    word-spacing: 2px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+a{
+    /* margin-left: 110px; */
+    padding: 59px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+   
+} 
+
+
+
+a:hover {
+    color: rgb(170, 193, 255);
+
+}
+
+/* 
+#agora{
+   
+    color:rgb(122, 147, 216);
+
+}  */
+
+img{
+    width: 100%;
+    z-index: 1;
+    opacity: 99%;
+    height: 689px;
+    
+}
+/* 
+h2 {
+    display: flex;
+    margin-right:50px ;
+    justify-content: center;
+} */
+
+
+
+p{
+display: flex;
+margin: 5%;
+color: rgb(255, 255, 255);
+width: 47%;
+align-items: center;
+
+} 
+
+#img_riju{
+    display: flex;
+    width: 450px;
+    height: 400px;
+    
+}
+
+#img_riju2, p{
+    background-color: rgb(108, 35, 35);
+    border-radius: 80px;
+    border-color: rgb(30, 31, 35);
+    text-justify:auto;
+    align-items: center;
+    justify-content: center;
+}
+
+h{
+    font-size: 60px;
+    
+}
