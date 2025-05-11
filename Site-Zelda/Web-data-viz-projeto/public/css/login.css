@@ -1,10 +1,8 @@
 body {
-    background: url(../Imagens/fundolink.jpg);
+    background: url(../Imagens/fundologin.webp);
     background-size: cover;
     background-position-y: -30px;
-    /* background-position-x: -20px; */
-    background-position: no-repeat;
-    /* background-size: 100% 114vh; */
+    background-size: 100% 114vh;
     margin: 0px;
     padding: 0px;
     background-attachment: fixed;
@@ -13,21 +11,18 @@ body {
 
 
 #button_finalizar {
-    position: relative;
     width: 97px;
     height: 40px;
     margin-left: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(251, 235, 55);
     border-radius: 10%;
     margin-top: 12px;
     opacity: 100%;
-    font-style: italic;
-    z-index: 1000;
 }
 
 #button_finalizar:hover{
-    background-color: rgb(102, 114, 152);
-    border-radius: 0% ;
+    background-color: rgb(115, 139, 212);
+    border-radius: 4px;
     /* margin-left: 39%; */
 }
 
@@ -63,7 +58,7 @@ a{
     display: flex;
     margin-top: -142px;
     justify-content: space-between;
-    margin-left: 170px;
+    margin-left: 169px;
     font-size: 28px;
     font-family: 'triforce';
     letter-spacing: 3px;
@@ -92,7 +87,7 @@ a:hover {
 
 #agora{
    
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 
 }
 
@@ -101,10 +96,10 @@ a:hover {
     justify-content: center;
     display: flex;
     /* height: 555px; */
-    width: 517px;
+    width: 497px;
     height: 510px;
     background-color: rgb(0, 0, 0);
-    opacity: 85%;
+    opacity: 70%;
     border-radius: 13px;
     color:rgb(255, 255, 255);
 }
@@ -116,10 +111,9 @@ input, .texto {
     z-index: 1000;
     /* background: rgb(255, 255, 255, .2); */
     display: flex;
-    height: 30px;
     flex-direction: column;
     width: 400px;
-    height: 420px;
+    height: 290px;
     font-size: 20px;
     color: rgb(255, 255, 255);
     border-radius: 4px;
@@ -131,6 +125,7 @@ input{
 }
 
 h2{
+    margin-top: 45px;
     margin-left: 138px;
     letter-spacing: 5px;
     font-family:sans-serif
@@ -139,23 +134,16 @@ h2{
 
 #bloco{
     background-color: black ;
-    opacity: 70%;
+    opacity: 80%;
     position: relative;
     z-index: 1;
-    width: 565px;
-    height: 555px;
+    width: 545px;
+    height: 355px;
     margin-left: 330px;
-    margin-top: -54px;
-    border-radius: 9px;
+    margin-top: -3px;
+    border-radius: 10px;
     border:solid;
     border-color: white ;
-}
-
-
-#input_nome:hover{
-    border-radius: 20%;
-    border-radius: 63;
-    border-color: rgb(149, 177, 255);
 }
 
 
@@ -166,12 +154,6 @@ h2{
 }
 
 
-#input_telefone:hover{
-    border-radius: 20%;
-    border-radius: 63;
-    border-color: rgb(149, 177, 255);
-}
-
 
 #input_senha:hover{
     border-radius: 20%;
@@ -180,15 +162,9 @@ h2{
 }
 
 
- #input_confirsenha:hover{
-    border-radius: 20%;
-    border-radius: 63;
-    border-color: rgb(149, 177, 255);
-}
-
 #div_mensagem {
     margin-top: 13px;
-    color:rgb(255, 251, 121);
+    color:rgb(59, 169, 237);
     font-size: 21px;
     margin-left: 11px;
    

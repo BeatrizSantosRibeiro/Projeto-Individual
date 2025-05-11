@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/login.css">
 
 
 </head>
@@ -17,8 +17,8 @@
         <div class="nav2">
             <div class="nav1">
                 <li>
-                    <a href="login.html"> Login
-                        <a href="../paginas/cadastro.html" id="agora"> Cadastrar
+                    <a href="login.html" id="agora"> Login
+                        <a href="../paginas/cadastro.html"> Cadastrar
                             <a href="sobre.html" id="">Sobre</a>
                 </li>
             </div>
@@ -29,17 +29,16 @@
                 <div class="container">
                     <div class="texto">
                         <center>
-                            <h2> Cadastrar </h2>
+                            <h2> Olá de volta! </h2>
                         </center>
-                        Nome: <input type="text" id="input_nome"><br>
+        
                         Email: <input type="text" id="input_email"><br>
-                        Telefone: <input type="number" id="input_telefone"><br>
                         Senha: <input type="text" id="input_senha"><br>
-                        Confirmação de senha: <input type="text" id="input_confirsenha">
-                        <br>
+
+                    
                     </div>
                 </div>
-                <button onclick="Criar()" id="button_finalizar"> Criar conta </button>
+                <button onclick="Criar()" id="button_finalizar"> Entrar </button>
                 <br>
                 <div id="div_mensagem"></div>
                 
@@ -60,9 +59,7 @@
 
         var nome = input_nome.value;
         var email = input_email.value;
-        var telefone = Number(input_telefone.value);
         var senha = input_senha.value;
-        var confirmação = input_confirsenha.value;
         var mensagem = '';
 
         if (nome == "" || email == "" || telefone == "" || senha == "" || confirmação == "") {
