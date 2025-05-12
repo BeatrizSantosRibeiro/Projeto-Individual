@@ -191,3 +191,16 @@ h2{
     margin-left: 11px;
    
 }
+
+
+#div_erros_login {
+  display: none
+}
+
+/* FORMULARIO */
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
