@@ -1,4 +1,4 @@
-body{
+body {
     background-color: black;
 }
 
@@ -33,14 +33,16 @@ img {
     width: 115px;
     transition: 2s;
 }
-img ,header{
+
+img,
+header {
     margin-top: -57px;
 }
 
 
 
 #logo:hover {
-    content: url(../Imagens/logobotaohover.png);  
+    content: url(../Imagens/logobotaohover.png);
 }
 
 
@@ -51,6 +53,7 @@ header {
     top: 0;
     left: 0;
     transition: 2s;
+
 }
 
 header i {
@@ -74,40 +77,44 @@ header ul li a {
     font-family: 'triforce';
     font-size: 28px;
     align-items: flex-start;
-    transition: 2s;
 }
 
-header.rolagem{
-background-color: rgb(111, 27, 27);
-padding: 15px 4%;
+header.rolagem {
+    background-color: rgb(231, 190, 139);
+    padding: 15px 4%;
+
+}
+
+header.rolagem ul a img {
+    opacity: 40%;
 }
 
 
-
-header.rolagem a{
+header.rolagem a {
     /* background-color: blue; */
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-size: 24px;
     transition: 2s;
 }
 
-header.rolagem ul{
+header.rolagem ul {
     margin-top: 25px;
     margin-left: 125px;
     margin-top: 54px;
     transition: 2s;
+
 }
 
-header.rolagem img{
+header.rolagem img {
     margin-top: 4px;
-    content: url(../Imagens/logobotao.png);  
+    content: url(../Imagens/logobotao.png);
     height: 105px;
-    width: 65px;
+    width: 70px;
 }
 
 .banner {
     height: 100vh;
-    background-image: url(../Imagens/1100017.jpg);  
+    background-image: url(../Imagens/1100017.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +122,7 @@ header.rolagem img{
 }
 
 .banner h1 {
-    font-size: 40px;   
+    font-size: 40px;
 }
 
 .banner h1 span {
@@ -123,36 +130,94 @@ header.rolagem img{
 }
 
 
-.h2{
+h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'triforce';
+    color:  rgb(255, 227, 90);
+    margin: 60px;
+}
+
+
+
+
+#tópicos {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-family: 'Triforce';
+    justify-content: space-around;
+    padding-top: 201px;
+    margin-right: 89px;
 
 }
 
-p{
+a:hover {
+    color: rgb(170, 193, 255);
+}
+
+
+#tópicos,a {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+
+
+
+#img_zelda {
+    display: flex;
+    width: 390px;
+    height: 450px;
+
+}
+
+#containerimg1 {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 80px;
+    border-color: rgb(30, 31, 35);
+    text-justify: auto;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5%;
+    color: rgb(0, 0, 0);
+    width: 59%;
+    font-family: "RocknRollOne";
+}
+
+
+#img2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#containerimg2 {
+     text-justify: auto;
     display: flex;
     margin: 5%;
-    color: rgb(255, 255, 255);
-    width: 47%;
+    width: 59%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 80px;
+    justify-content: flex-end;
+    margin-left: 550px; 
+    border-color: rgb(30, 31, 35);
     align-items: center;
-    
-    } 
-    
-    #img_zelda{
-        display: flex;
-        width: 550px;
-        height: 500px;
-        
-    }
-    
-    #img_riju2, p{
-        background-color: rgb(255, 255, 255);
-        border-radius: 80px;
-        border-color: rgb(30, 31, 35);
-        text-justify:auto;
-        align-items: center;
-        justify-content: center;
-    }
+    justify-content: flex-end;
+    color: rgb(0, 0, 0);
+    font-family: "RocknRollOne";
+    padding-left:1% ;
+}
+
+
+
+ #img_zelda #containerimg1{
+    opacity: 30%;
+}

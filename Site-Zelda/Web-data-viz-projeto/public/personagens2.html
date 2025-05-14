@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/personagens2.css" class="">
+    <link rel="stylesheet" href="../public/css/personagens2.css" class="">
 </head>
+
 <body>
     <header id="header">
-<div class="container">
+        <div class="container">
 
-    <div class="flex">
-        <img id="logo" src="../Imagens/logobotao.png" alt="">
-        <nav>
-            <ul>
-                <li> <a href="login.html">Login</a></li>
-                <li> <a href="">Cadastrar</a></li>
-                <li> <a href="">Sobre</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+            <div class="flex">
+
+               <img src="../public/Imagens/logobotao.png"
+                id="logo" onclick="botãologo()">
+
+                <nav>
+                    <ul>
+                        <li> <a href="login.html">Login</a></li>
+                        <li> <a href="">Cadastrar</a></li>
+                        <li> <a href="">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+         
+        
     </header>
-    <section class="banner">
+    <section class="banner"><br><br><br><br><br><br><br><br><br><br><br>
         <!-- <div id="frase">
-        <h1>Descubra um<span> Novo Mundo </span></h1>
-    </div> -->
+            <h1>Descubra um<span> Novo Mundo </span></h1>
+        </div> -->
+        
+        <br><br>
+        <div id="tópicos">
+            <a href="história.html" id="">História</a><br>
+            <a href="personagens2.html" id="">Personagens</a><br>
+            <a href="ambientes.html" id="">Ambientes</a><br>
+            <a href="/" id=""> Simulador </a><br>
+        </div>
+        
     </section>
-<br><br><br><br> <h2 class="h2">Grandes Heróis</h2>
-   
-    <p>
-        <img src="../Imagens/zeldatocha.png" alt="" id="img_zelda">
-        
-        Makeela Riju<br><br><br><br>
-        tornou-se chefe dos Gerudo após a morte de sua mãe. <br>Embora seja consideravel jovem para uma chefe, é respeitada por seu povo. Seguindo a linha de sucessão, acredita-se que seja descendente direta de Urbosa. <br> Ela ajuda Link a derrotar a Besta Divina Vah Naboris depois que ele recupera o Elmo do Trovão do Esconderijo do Clã Yiga.<br>
-        
-</p>
-<br><br>
-<p>
-    <img src="../Imagens/anyone-else-get-the-feeling-riju-likes-link-v0-hgnglysjysbb1.png" alt="" id="img_riju">
-        
-    Makeela Riju<br><br><br><br>
+    <hr><hr>
+    <br><br><br><br>
+    <h2>Grandes Heróis</h2>
+
+    <div id="containerimg1">
+        <img src="../public/Imagens/zeldatocha.png" alt="" id="img_zelda">
+   Acompanhando Link, está a princesa Zelda, uma figura nobre e sábia que desempenha papel crucial na trama. Embora não seja exclusivamente uma donzela em perigo, Zelda é frequentemente alvo de forças malignas em busca da Triforce. Sua sabedoria e habilidades mágicas complementam a força de Link, formando uma dupla formidável.</div>
+    
 
 
-</p>
 
+    <div id="containerimg2">
+        Designado como o herói destinado a enfrentar as ameaças a Hyrule, Link muitas vezes é orientado pela princesa Zelda e tem como sua principal característica a sua coragem inabalável, sendo reconhecido por enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
+        <img src="../public/Imagens/link7.png" alt="" id="img_zelda">
+    </div>
+
+
+
+    <div id="containerimg1">
+        <img src="../public/Imagens/urbosa.png" alt="" id="img_zelda">
+    </div>
+
+
+
+    <div id="containerimg2">
+        <img src="../public/Imagens/zeldatocha.png" alt="" id="img_zelda">
+    </div>
 
 </body>
+
 </html>
 
 <script>
-window.addEventListener('scroll', function(){
+  function botãologo() {
 
-    // Classe rolagem ser adicionada sempre que tiver uma rolagem eixo y, e posição ser maior que 0
-    var header = document.querySelector('#header')
-    header.classList.toggle('rolagem',window.scrollY > 300 )
+        window.location.href = "index.html";
 
-    // se o mudar o utimo valor ele demora mais para transformar, muda a posição
-})
+    }
+    
+    window.addEventListener('scroll', function () {
+
+        // Classe rolagem ser adicionada sempre que tiver uma rolagem eixo y, e posição ser maior que 0
+        var header = document.querySelector('#header')
+        header.classList.toggle('rolagem', window.scrollY > 50)
+
+        // se o mudar o utimo valor ele demora mais para transformar, muda a posição
+    })
 
 
 
