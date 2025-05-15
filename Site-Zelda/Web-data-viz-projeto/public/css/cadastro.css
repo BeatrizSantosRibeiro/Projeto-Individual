@@ -184,12 +184,12 @@ h2{
     border-color: rgb(149, 177, 255);
 }
 
-#div_mensagem {
+#mensagem_erro {
     margin-top: 13px;
     color:rgb(255, 251, 121);
     font-size: 21px;
     margin-left: 11px;
-   
+    justify-content: center;
 }
 
 

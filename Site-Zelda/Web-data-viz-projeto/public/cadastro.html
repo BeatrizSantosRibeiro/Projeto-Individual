@@ -8,14 +8,14 @@
 
   <title>AquaTech | Cadastro</title>
 
-  <link rel="stylesheet" href="../public/css/cadastro.css">
+  <link rel="stylesheet" href="/css/cadastro.css">
   <!-- <script src="./js/sessao.js"></script> -->
 
 </head>
 
 <body>
 
-  <div class="logo_aaa"><img src="../public/Imagens/logobotao.png" id="logo" onclick="botãologo()"></div>
+  <div class="logo_aaa"><img src="/Imagens/logobotao.png" id="logo" onclick="botãologo()"></div>
   <div class="nav">
     <div class="nav2">
       <div class="nav1">
@@ -43,11 +43,10 @@
         </div>
         <button onclick="cadastrar()" id="button_finalizar"> Criar conta </button>
         <br><br>
-        <div id="cardErro" style="display: none;">
 
-          <span id="mensagem_erro"></span>
-        </div>
+        <div id="mensagem_erro"></div>
       </div>
+    </div>
 
 
 </body>
@@ -56,12 +55,11 @@
 
 <script>
 
-function botãologo() {
+  function botãologo() {
 
-        window.location.href = "index.html";
+    window.location.href = "index.html";
 
-    }
-
+  }
 
   // Array para armazenar empresas cadastradas para validação de código de ativação 
   let listausuariosCadastrados = [];
@@ -76,40 +74,45 @@ function botãologo() {
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_confirsenha.value;
     var idusuarioVincular
+    var mensagem = ""
 
-
-    
-    // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
-
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
 
-      finalizarAguardar();
-      return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
+      mensagem =
+        "Por favor preencha todos os campos.";
+
+    
+      // finalizarAguardar();
     }
 
-    // Verificando se o código de ativação é de alguma empresa cadastrada
-    var email = false
-    for (let i = 0; i < listausuariosCadastrados.length; i++) {
-      if (listausuariosCadastrados[i].email == emailVar) {
-        idusuarioVincular = listausuariosCadastrados[i].id
-        console.log("Código de ativação válido.");
-        email.valido = true;
-        break;
-      } else {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-        finalizarAguardar();
-      }
+    else if (emailVar.includes("@") == false || emailVar.includes(".") == false) {
+      mensagem = '<b> Email inválido!</b>'
+    }
+
+    else if (senhaVar.includes("!") == false && senhaVar.includes("@") == false && senhaVar.includes("#") == false && senhaVar.includes("$") == false && senhaVar.includes("%") == false && senhaVar.includes("&") == false && senhaVar.includes("*") == false) {
+
+      mensagem = `<b> Senha Inválida. </b> <br> Nescessário ter no mínimo um caractere especial. `
+    }
+
+    else if (senhaVar.length < 8) {
+      mensagem = '<b> Senha Inválida. </b> <br>.Nescessário ter no Mínimo 8 caracteres.'
+    }
+
+
+    else if ((senhaVar == confirmacaoSenhaVar) == false) {
+      mensagem = 'Erro de confirmação de senha.';
+
+    }
+
+    if (mensagem != '') {
+      mensagem_erro.innerHTML = mensagem
+      return;
+      // interrompe e não segue pro fetch
     }
 
     // Enviando o valor da nova input
@@ -124,34 +127,34 @@ function botãologo() {
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        idusuarioVincularServer: idusuarioVincular
+
       }),
     })
       .then(function (resposta) {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
             window.location = "login.html";
-          }, "2000");
+          }, "3000");
+        }
+        else {
+        
+          mensagem_erro.innerHTML = "Houve um erro ao realizar o cadastro.";
 
-
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+          setInterval(sumirMensagem, 2000);
         }
       })
+
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
+        mensagem_erro.innerHTML = "Erro ao tentar se cadastrar.";
+
+
       });
 
-    return false;
   }
 
 
@@ -174,19 +177,7 @@ function botãologo() {
   }
 
 
-  function finalizarAguardar(texto) {
-    var divAguardar = document.getElementById("div_aguardar");
-
-
-    var divErrosLogin = document.getElementById("div_erros_login");
-    if (texto) {
-      divErrosLogin.style.display = "flex";
-      divErrosLogin.innerHTML = texto;
-    }
-  }
-
-
   function sumirMensagem() {
-    cardErro.style.display = "none";
+    mensagem_erro.style.display = "none";
   }
 </script>
