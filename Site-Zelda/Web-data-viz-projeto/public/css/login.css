@@ -14,11 +14,11 @@ body {
     width: 97px;
     height: 40px;
     margin-left: 40%;
-    background-color: rgb(251, 235, 55);
+    background-color: rgb(255, 246, 143);
     border-radius: 10%;
     margin-top: 12px;
     opacity: 100%;
-}
+}   
 
 #button_finalizar:hover{
     background-color: rgb(115, 139, 212);
@@ -138,7 +138,7 @@ h2{
     position: relative;
     z-index: 1;
     width: 545px;
-    height: 355px;
+    height: 455px;
     margin-left: 330px;
     margin-top: -3px;
     border-radius: 10px;
@@ -162,7 +162,7 @@ h2{
 }
 
 
-#div_mensagem {
+#mensagem_erro {
     margin-top: 13px;
     color:rgb(59, 169, 237);
     font-size: 21px;
