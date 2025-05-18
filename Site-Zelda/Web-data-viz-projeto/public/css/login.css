@@ -113,7 +113,7 @@ input, .texto {
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 290px;
+    height: 324px;
     font-size: 20px;
     color: rgb(255, 255, 255);
     border-radius: 4px;
@@ -124,11 +124,18 @@ input{
     font-size: 17px;
 }
 
+@font-face {
+    font-family: 'minishcap';
+    src: url('../fontes/minishcap/minishcap__v10.ttf') format('truetype');
+}
+
+
+
 h2{
     margin-top: 45px;
     margin-left: 138px;
     letter-spacing: 5px;
-    font-family:sans-serif
+    font-family:'minishcap', sans-serif;
 }
 
 
@@ -147,15 +154,16 @@ h2{
 }
 
 
-#input_email:hover{
+#email_input:hover{
     border-radius: 20%;
     border-radius: 63;
     border-color: rgb(149, 177, 255);
+    
 }
 
 
 
-#input_senha:hover{
+#senha_input:hover{
     border-radius: 20%;
     border-radius: 63;
     border-color: rgb(149, 177, 255);

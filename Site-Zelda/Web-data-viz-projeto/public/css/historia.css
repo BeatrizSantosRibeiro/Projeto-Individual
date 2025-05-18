@@ -1,105 +1,171 @@
-
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color: rgb(29, 29, 29);
+body {
+    background-color: black;
 }
 
-.logo_aaa{
-    
-    position: relative;
-    margin-top: -56px;
-    margin-left: 354px;
-    /* background-color: rgb(234, 176, 77); */
-    z-index: 1000;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
- 
-#logo{
-    position: fixed;
+
+html {
+    height: 500vh;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    word-spacing: 75px;
+    letter-spacing: 3px;
+    margin-top: 54px;
+}
+
+img {
+    /* margin-top: -45px; */
+    margin-left: -80px;
     height: 185px;
     width: 115px;
-    align-items: flex-start;
-    cursor: pointer;    
-    
+    transition: 2s;
 }
 
-
-#botãologo {
-    /* padding-top: -100px; */
-    all: unset;
+img,
+header {
+    margin-top: -57px;
 }
+
 
 
 #logo:hover {
-    content: url(../Imagens/logobotaohover.png);  
+    content: url(../Imagens/logobotaohover.png);
 }
 
 
-.nav{
-    position: relative;
-    display: flex;
-    margin-top: -629px;
-    margin-left: -344px;
-    justify-content: space-between;
-    font-size: 28px;
-    font-family: 'triforce';
-    letter-spacing: 3px;
-    background-color: none;
-    width: 80%;
-    height: 40px;
-    list-style: none;
-    /* background-color: aqua; */
-    z-index: 1000;
-}
-
-#fixar_nav{
-    word-spacing: 2px;
-    position: fixed;
-    z-index: 1000;
+header {
     width: 100%;
+    padding: 61px 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 2s;
+
+}
+
+header i {
+    font-size: 30px;
+    color: #fff;
+}
+
+header ul {
+    list-style-type: none;
+    margin-left: 60px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'triforce';
+    font-size: 28px;
+    align-items: flex-start;
+}
+
+header.rolagem {
+    background-color: rgb(77, 148, 47);
+    opacity: 50%;
+    padding: 15px 4%;
+    height: 150px;
+
+}
+
+header.rolagem ul a img {
+    opacity: 100%;
 }
 
 
-a{
-    /* margin-left: 110px; */
-    padding: 59px;
-    text-decoration: none;
+header.rolagem a {
+    /* background-color: blue; */
     color: rgb(0, 0, 0);
-    font-size: 28px;
-   
-} 
+    font-size: 24px;
+    transition: 5s;
+}
+
+header.rolagem ul {
+    margin-top: 25px;
+    margin-left: 125px;
+    margin-top: 54px;
+    transition: 2s;
+
+}
+
+header.rolagem img {
+    margin-top: -15px;
+    content: url(../Imagens/logobotao.png);
+    height: 100px;
+    width: 66px;
+}
+
+.banner {
+    height: 97vh;
+    opacity: 60%;
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -3;
+}
+
+.banner h1 {
+    font-size: 40px;
+}
+
+.banner h1 span {
+    color: rgb(0, 0, 0);
+}
 
 
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-family: 'triforce';
+    color:  rgb(255, 227, 90);
+    margin: 60px;
+}
+
+
+
+
+#tópicos {
+    color: rgb(0, 0, 0);
+    font-size: 58px;
+    font-family: 'Triforce';
+    justify-content: center;
+    margin-top: 25px;
+}
 
 a:hover {
     color: rgb(170, 193, 255);
-
 }
 
-/* 
-#agora{
-   
-    color:rgb(122, 147, 216);
 
-}  */
-
-img{
-    width: 100%;
-    z-index: 1;
-    opacity: 99%;
-    height: 687px;
-    
-}
-/* 
-h2 {
+#tópicos,a {
     display: flex;
-    margin-right:50px ;
-    justify-content: center;
-} */
+    align-items:center;
+    flex-direction: column;
+    font-size: 64px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 
-
-/* 
-p{
-
-
-} */
+}

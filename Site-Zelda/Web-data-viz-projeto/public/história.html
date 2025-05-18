@@ -9,32 +9,41 @@
 </head>
 
 <body>
-    <img src="../Imagens/possivelfundohistoria1.jpg" alt="" class="back">
-    <div id="fixar_nav">
-        <div class="nav">
-            <div class="logo_aaa"><img src="../Imagens/logobotao.png" id="logo" onclick="botãologo()"> </div>
-            <div class="nav2">
-                <div class="nav1">
-                    <li>
-                        <a href="login.html"> Entrar
-                            <a href="../paginas/cadastro.html" id="agora"> Cadastrar
-                                <a href="sobre.html" id="">Sobre
-                                    
-                                </a>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-                <!-- <center><h2> Lore </h2></center> -->
+ <header id="header">
+        <div class="container">
+
+            <div class="flex">
+
+               <img src="/Imagens/logobotao.png"
+                id="logo" onclick="botãologo()">
+
+                <nav>
+                    <ul>
+                        <li> <a href="login.html">Login</a></li>
+                        <li> <a href="">Cadastrar</a></li>
+                        <li> <a href="">Sobre</a></li>
+                    </ul>
+                </nav>
             </div>
-
-
         </div>
-
-            <p>
-        <br>aaaaaaaaaaaaaaa<br>aaaaaaaaaa<br>aaaaaaa<br>aaaaaa<br>aaaaaaaaa<br>aaaaaa<br>aaaaaa<br>
-
-    </p>
+         
+        
+    </header>
+    <section class="banner"><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- <div id="frase">
+            <h1>Descubra um<span> Novo Mundo </span></h1>
+        </div> -->
+        
+        <br><br>
+        <div id="tópicos">
+            <a href="história.html" id=""> Jornada do herói </a><br>
+          
+        </div>
+        
+    </section>
+    <hr><hr>
+    <br><br><br><br>
+    <h2>Grandes Heróis</h2>
 
 
 </body>
@@ -42,11 +51,19 @@
 </html>
 
 <script>
+function botãologo() {
 
-    function botãologo() {
-        window.location.href = "pagina_inicial.html";
+        window.location.href = "index.html";
+
     }
+    
+    window.addEventListener('scroll', function () {
 
+        // Classe rolagem ser adicionada sempre que tiver uma rolagem eixo y, e posição ser maior que 0
+        var header = document.querySelector('#header')
+        header.classList.toggle('rolagem', window.scrollY > 50)
 
+        // se o mudar o utimo valor ele demora mais para transformar, muda a posição
+    })
 
 </script>
