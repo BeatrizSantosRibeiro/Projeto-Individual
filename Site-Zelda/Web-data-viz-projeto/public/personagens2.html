@@ -14,8 +14,7 @@
 
             <div class="flex">
 
-               <img src="/Imagens/logobotao.png"
-                id="logo" onclick="botãologo()">
+                <img src="/Imagens/logobotao.png" id="logo" onclick="botãologo()">
 
                 <nav>
                     <ul>
@@ -26,14 +25,14 @@
                 </nav>
             </div>
         </div>
-         
-        
+
+
     </header>
     <section class="banner"><br><br><br><br><br><br><br><br><br><br><br>
         <!-- <div id="frase">
             <h1>Descubra um<span> Novo Mundo </span></h1>
         </div> -->
-        
+
         <br><br>
         <div id="tópicos">
             <a href="história.html" id="">História</a><br>
@@ -41,22 +40,34 @@
             <a href="ambientes.html" id="">Ambientes</a><br>
             <a href="/" id=""> Simulador </a><br>
         </div>
-        
+
     </section>
-    <hr><hr>
+    <hr>
+    <hr>
     <br><br><br><br>
     <h2>Grandes Heróis</h2>
 
     <div id="containerimg1">
         <img src="/Imagens/zeldatocha.png" alt="" id="img_zelda">
-   Acompanhando Link, está a princesa Zelda, uma figura nobre e sábia que desempenha papel crucial na trama. Embora não seja exclusivamente uma donzela em perigo, Zelda é frequentemente alvo de forças malignas em busca da Triforce. Sua sabedoria e habilidades mágicas complementam a força de Link, formando uma dupla formidável.</div>
-    
+        <div id="text">
+            <h1>Zelda</h1>
+            Acompanhando Link, está a princesa Zelda, uma figura nobre e sábia que desempenha papel crucial na trama.
+            Embora não seja exclusivamente uma donzela em perigo, Zelda é frequentemente alvo de forças malignas em
+            busca da Triforce. Sua sabedoria e habilidades mágicas complementam a força de Link, formando uma dupla
+            formidável.
+        </div>
+    </div>
 
 
 
     <div id="containerimg2">
-        Designado como o herói destinado a enfrentar as ameaças a Hyrule, Link muitas vezes é orientado pela princesa Zelda e tem como sua principal característica a sua coragem inabalável, sendo reconhecido por enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
         <img src="/Imagens/link7.png" alt="" id="img_zelda">
+        <div id="text">
+            <h1>Link</h1>
+            Designado como o herói destinado a enfrentar as ameaças a Hyrule, Link muitas vezes é orientado pela
+            princesa Zelda e tem como sua principal característica a sua coragem inabalável, sendo reconhecido por
+            enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
+        </div>
     </div>
 
 
@@ -76,12 +87,12 @@
 </html>
 
 <script>
-  function botãologo() {
+    function botãologo() {
 
         window.location.href = "index.html";
 
     }
-    
+
     window.addEventListener('scroll', function () {
 
         // Classe rolagem ser adicionada sempre que tiver uma rolagem eixo y, e posição ser maior que 0
