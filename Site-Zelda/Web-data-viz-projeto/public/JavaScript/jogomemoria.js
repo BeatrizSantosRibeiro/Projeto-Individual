@@ -15,7 +15,10 @@ const caracterer = [
     'link',
     'kohga',
     'impa',
-    'daruk'
+    'daruk',
+    'zelda',
+    'riju',
+    'sidon'
 ]
 
 

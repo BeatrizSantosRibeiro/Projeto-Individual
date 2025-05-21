@@ -1,5 +1,6 @@
 @import url('C:\Users\beatr\Projeto-Individual\Site-Zelda\Web-data-viz-projeto\public\fontes\tingle-tuner\tingle_tuner.ttf');
 
+
 body {
     background-color: black;
 }
@@ -85,7 +86,7 @@ header ul li a {
 header.rolagem {
     background-color: rgb(231, 190, 139);
     padding: 15px 4%;
-
+    height: 150px;
 }
 
 header.rolagem ul a img {
@@ -109,7 +110,7 @@ header.rolagem ul {
 }
 
 header.rolagem img {
-    margin-top: 4px;
+    margin-top: -20px;    
     content: url(../Imagens/logobotao.png);
     height: 105px;
     width: 70px;
@@ -245,4 +246,11 @@ h1{
 
 h1{
     display: flex;
+}
+
+#img_revali {
+    display: flex;
+    width: 390px;
+    height: 450px;
+
 }
