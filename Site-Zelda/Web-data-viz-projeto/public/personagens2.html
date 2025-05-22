@@ -18,9 +18,9 @@
 
                 <nav>
                     <ul>
-                        <li> <a href="login.html">Login</a></li>
-                        <li> <a href="">Cadastrar</a></li>
-                        <li> <a href="">Sobre</a></li>
+                        <li> <a href="login.html">História</a></li>
+                        <li> <a href="">Personagens</a></li>
+                        <li> <a href="">Ambientes</a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,12 +34,12 @@
         </div> -->
 
         <br><br>
-        <div id="tópicos">
+        <!-- <div id="tópicos">
             <a href="história.html" id="">História</a><br>
             <a href="personagens2.html" id="">Personagens</a><br>
             <a href="ambientes.html" id="">Ambientes</a><br>
             <a href="/" id=""> Simulador </a><br>
-        </div>
+        </div> -->
 
     </section>
     <hr>
@@ -48,7 +48,7 @@
     <h2>Grandes Heróis</h2>
 
     <div id="containerimg1">
-        <img src="/Imagens/zeldatocha.png" alt="" id="img_zelda">
+        <img src="/Imagens/zeldadefora.png" alt="" id="img_zelda">
         <div id="text">
             <h1>Zelda</h1>
             Acompanhando Link, está a princesa Zelda, uma figura nobre e sábia que desempenha papel crucial na trama.
@@ -57,21 +57,25 @@
             formidável.
         </div>
     </div>
+    <img src="/Imagens/zeldagif.gif" alt="" id="img_zeldadefora">
 
 
+<Br><br><br><br><br><br><br><br><br>
 
     <div id="containerimg2">
-        <img src="/Imagens/link7.png" alt="" id="img_zelda">
         <div id="text">
             <h1>Link</h1>
             Designado como o herói destinado a enfrentar as ameaças a Hyrule, Link muitas vezes é orientado pela
             princesa Zelda e tem como sua principal característica a sua coragem inabalável, sendo reconhecido por
             enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
         </div>
+        <img src="/Imagens/link.png" alt="" id="img_zelda">
     </div>
+    <img src="/Imagens/linkgif.gif" alt="" id="img_linkdefora">
 
 
-
+<Br><br><br><br><br><br>
+    
     <div id="containerimg1">
         <img src="/Imagens/urbosa.png" alt="" id="img_zelda">
         <div id="text">
@@ -81,19 +85,27 @@
             enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
         </div>
     </div>
+      <img src="/Imagens/urbosagif.gif" alt="" id="gif_urbosadefora">
 
 
+<Br><br><br><br><br><br><br><br><br><br><br>
 
     <div id="containerimg2">
         
-        <img src="/Imagens/imagem-jogomemoria/revali.png" alt="" id="img_revali">
         <div id="text">
             <h1>Link</h1>
             Designado como o herói destinado a enfrentar as ameaças a Hyrule, Link muitas vezes é orientado pela
             princesa Zelda e tem como sua principal característica a sua coragem inabalável, sendo reconhecido por
             enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
         </div>
+        <img src="/Imagens/revalidefora.webp" alt="" id="img_revali">
+       
     </div>
+    <img src="/Imagens/revali.gif" alt="" id="gif_revalidefora">
+    
+
+
+<Br><br><br><br><br>
 
 
     <div id="containerimg1">
@@ -106,17 +118,24 @@
             formidável.
         </div>
     </div>
+    <img src="/Imagens/miphagif.gif" alt="" id="gif_miphadefora">
+
+    <Br><br><br><br><br><br><br><br><br><br><Br>
 
 
     <div id="containerimg2">
-        <img src="/Imagens/imagem-jogomemoria/daruk.png" alt="" id="img_zelda">
         <div id="text">
             <h1>Link</h1>
             Designado como o herói destinado a enfrentar as ameaças a Hyrule, Link muitas vezes é orientado pela
             princesa Zelda e tem como sua principal característica a sua coragem inabalável, sendo reconhecido por
             enfrentar monstros, labirintos e diversos desafios impossíveis para proteger Zelda e toda Hryule.
         </div>
+        <img src="/Imagens/imagem-jogomemoria/daruk.png" alt="" id="img_daruk">
     </div>
+    <img src="/Imagens/darukgif.gif" alt="" id="gif_darukdefora">
+    
+
+ <Br><br><br><br><br><br><br><br><br>
 
 
       <div id="containerimg1">
@@ -170,6 +189,7 @@
 
         // Classe rolagem ser adicionada sempre que tiver uma rolagem eixo y, e posição ser maior que 0
         var header = document.querySelector('#header')
+
         header.classList.toggle('rolagem', window.scrollY > 50)
 
         // se o mudar o utimo valor ele demora mais para transformar, muda a posição

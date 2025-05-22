@@ -16,9 +16,9 @@ const caracterer = [
     'kohga',
     'impa',
     'daruk',
-    'zelda',
-    'riju',
-    'sidon'
+    'minichef',
+    'Bokoblin',
+    'zelda'
 ]
 
 
