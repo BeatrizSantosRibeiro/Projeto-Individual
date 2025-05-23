@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'minishcapMinishCap | v1.0';
+    font-family: 'triforce';
+    letter-spacing: 2px;
 }
 
+
 main{
+    background-image: url(../Imagens/imagem-jogomemoria/backcartas.gif);
     display: flex;
     flex-direction: column;
-    background-image: url(../Imagens/download\ aaaaaa\(6\)\ \(2\).jpeg);
     /* background-color: rgb(199, 140, 255); */
     background-position: 0;
     background-size: cover;
@@ -28,25 +30,25 @@ main{
 header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: rgba(40, 115, 159, 0.87);
-    width: 700px;
+    justify-content: space-around;
+    background-color: rgba(49, 130, 134, 0.889);
+    width: 1000px;
     padding: 30px;
     margin: 0 0 30px;
     border-radius: 15px;
     margin: 20px;
-    margin-left: 368px;
+    margin-left: 227.3px;
     font-family: 'MinishCap | v1.0';
 }
 
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     width: 100%;
     max-width: 1000px;
-    gap: 15px;
-    padding: 20px 20px 60px;
+    gap: 20px;
+    padding: 15px 150px 35px;
     align-items: center;
     margin-left: 28px;
     
@@ -71,19 +73,24 @@ header{
     position: absolute;
     background-size: cover;
     background-position: center;
-    background-position-y: -13px;
-    border-radius: 5px ;
-    border: 2px solid rgb(2, 98, 108);
+    /* background-position-y: -13px; */
+    border-radius: 10px ;
+    border: 3px solid rgb(31, 29, 128);
     transition: all 500ms ease;
 }
 
 .back{
-    background-image: url('../Imagens/cardback.jpeg  ');
+    background-image: url('../Imagens/imagem-jogomemoria/bbbbbbb.jpeg');
+  
     backface-visibility: hidden;
 }
 
 .front{
-    transform: rotateY(180deg);
+    background-size:cover ;
+    background-repeat: none;
+    background-position-y: -2px;
+    background-repeat: no-repeat;
+
 }
 .reveal-card {
     transform: rotateY(180deg);
@@ -96,3 +103,5 @@ header{
     filter: saturate(0);
     opacity: 0.8;
 }
+
+    

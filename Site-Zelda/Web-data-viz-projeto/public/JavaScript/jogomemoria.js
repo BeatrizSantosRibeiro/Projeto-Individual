@@ -4,21 +4,19 @@ const timer = document.querySelector('.timer');
 
 
 const caracterer = [
-    'zelda',
-    'yonobo',
-    'urbosa',
-    'teba',
-    'sidon',
-    'riju',
-    'revali',
-    'mipha',
-    'link',
-    'kohga',
-    'impa',
-    'daruk',
-    'minichef',
-    'Bokoblin',
-    'zelda'
+    'darukpixelart',
+    'impapixelart',
+    'linkpixeart',
+    'miphapixelart',
+    'revalipixelart',
+    'rijupixelart',
+    'sidonpixelart',
+    'tebapixelart',
+    'tulinpixelart',
+    'urbosapixelart',
+    'yunobopixelart',
+    'zeldapixelart',
+   
 ]
 
 
