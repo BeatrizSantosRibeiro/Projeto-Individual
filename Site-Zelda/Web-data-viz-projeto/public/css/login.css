@@ -81,13 +81,13 @@ a{
 
 
 a:hover {
-    color: rgb(170, 193, 255);
+    color: rgb(109, 146, 249);
 
 }
 
 #agora{
    
-    color: rgb(255, 255, 255);
+    color: rgb(83, 146, 255);
 
 }
 
@@ -136,6 +136,7 @@ h2{
     margin-left: 138px;
     letter-spacing: 5px;
     font-family:'minishcap', sans-serif;
+    color: rgb(255, 246, 143);;
 }
 
 
@@ -171,7 +172,7 @@ h2{
 
 
 #mensagem_erro {
-    margin-top: 13px;
+    margin-top: 3px;
     color:rgb(59, 169, 237);
     font-size: 21px;
     margin-left: 11px;

@@ -130,6 +130,8 @@ header.rolagem img {
 
 }
 
+
+
 .banner h1 {
     font-size: 40px;
 }
@@ -164,6 +166,12 @@ h2 {
 
 a:hover {
     color: rgb(170, 193, 255);
+}
+
+#agora{
+   
+    color: rgb(170, 193, 255);
+
 }
 
 
@@ -349,8 +357,8 @@ h1 {
     display: flex;
     width: 400px;
     height: 410px;
-    margin-top: -426px;
-    margin-left: 100px;
+    margin-top: -480px;
+    margin-left: 1030px;
     border-radius: 20px;
 }
 
@@ -358,8 +366,8 @@ h1 {
     display: flex;
     width: 390px;
     height: 400px;
-    margin-top: -500px;
-    margin-left: 1030px;
+    margin-top: -400px;
+    margin-left: 100px;
     border-radius: 20px;
 }
 
@@ -367,13 +375,14 @@ h1 {
     display: flex;
     width: 480px;
     height: 490px;
-    margin-left: 20px;
+    margin-left: -20px;
 }
 
 #img_sidon {
     display: flex;
     width: 430px;
     height: 460px;
+    margin-left: 20px;
 
 }
 
@@ -402,4 +411,35 @@ h1 {
 
 .banner h1 span {
     color: rgb(0, 0, 0);
+}
+
+#gif_reidefora {
+    display: flex;
+    width: 390px;
+    height: 400px;
+    margin-top: 5px;
+    margin-left: -445px;
+    border-radius: 20px;
+    margin-right: 90px;
+}
+
+
+#gif_dorephandefora {
+    display: flex;
+     width: 450px;
+    height: 360px;
+    margin-top: 5px;
+    margin-left: -495px;
+    border-radius: 20px;
+    margin-right: 90px;
+}
+
+footer{
+    display: flex;
+    color: white;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(89, 43, 43, 0.285);
 }

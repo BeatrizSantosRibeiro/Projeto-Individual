@@ -172,9 +172,11 @@ window.onload = () => {
     const playerName = localStorage.getItem('player');
     // getIten recupera valor 
     Spanplayer.innerHTML = playerName;
-    // StartTimer();
+    StartTimer();
     loadGame();
 }
+
+
 
 
 
