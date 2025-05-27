@@ -4,7 +4,7 @@ var router = express.Router();
 var memoriaController = require("../controllers/memoriaController");
 
 
-router.post("/cadastrar", function (req, res) {
+router.post("/jogomemoria", function (req, res) {
     // função a ser chamada quando acessar /carros/cadastrar
     memoriaController.cadastrar(req, res)
 });
