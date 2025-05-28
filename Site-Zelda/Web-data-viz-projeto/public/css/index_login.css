@@ -41,7 +41,6 @@ img {
 
 
 .banner {
-    opacity: 90%;
     background-image: url(/Imagens/index-login/giffundo3.gif);
     background-size: cover;
     /* margin-top: -48px; */
@@ -50,25 +49,15 @@ img {
 }
 
 
-a:hover {
-    color: rgb(170, 193, 255);
-}
-
-#agora {
-
-    color: rgb(170, 193, 255);
-
-}
-
-.container{
+.container {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 40px;
-    
+
 }
 
-#imgs{
+#imgs {
     display: flex;
     object-fit: cover;
     height: 300px;
@@ -76,13 +65,13 @@ a:hover {
 
 }
 
-#imgs:hover{
-height: 360px;
-    width: 360px;
-    transition: 1.6s;
+#imgs:hover {
+    height: 340px;
+    width: 340px;
+    transition: 1s;
 }
 
-footer{
+footer {
     display: flex;
     color: white;
     height: 40px;

@@ -166,8 +166,8 @@ a:hover {
     color: rgb(170, 193, 255);
 }
 
-#agora{
-   
+#agora {
+
     color: rgb(170, 193, 255);
 
 }
@@ -204,7 +204,7 @@ a {
     color: rgb(255, 234, 152);
     width: 59%;
     font-family: "MinishCap | v1.0";
-
+    text-align: justify
 }
 
 #text {
@@ -244,8 +244,7 @@ h1 {
     padding-left: 1%;
     text-justify: auto;
     width: 59%;
-
-
+    text-align: justify
 }
 
 
@@ -384,8 +383,8 @@ h1 {
 
 }
 
-#gif_yonobo{
-     display: flex;
+#gif_yonobo {
+    display: flex;
     width: 440px;
     height: 360px;
     margin-top: -452px;
@@ -395,7 +394,7 @@ h1 {
 
 .banner2 {
     height: 100vh;
-    background-color:#fff;
+    background-color: #fff;
     /* background-position: center; */
 
     background-size: cover;
@@ -424,7 +423,7 @@ h1 {
 
 #gif_dorephandefora {
     display: flex;
-     width: 450px;
+    width: 450px;
     height: 360px;
     margin-top: 5px;
     margin-left: -495px;
@@ -432,7 +431,7 @@ h1 {
     margin-right: 90px;
 }
 
-footer{
+footer {
     display: flex;
     color: white;
     height: 90px;

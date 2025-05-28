@@ -8,7 +8,7 @@
 
 
 main{
-    background-image: url(../Imagens/imagem-jogomemoria/backcartas.gif);
+    background-image: url(../Imagens/imagem-jogomemoria/backgrundcarta.gif);
     display: flex;
     flex-direction: column;
     /* background-color: rgb(199, 140, 255); */
