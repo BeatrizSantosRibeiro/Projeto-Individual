@@ -2,7 +2,6 @@ var usuarioModel = require("../models/usuarioModel");
 // var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
-    var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
@@ -26,8 +25,9 @@ function autenticar(req, res) {
                         //             if (resultadoAquarios.length > 0) {
                         res.json({
                             //                     id: resultadoAutenticar[0].id,
-                            email: resultadoAutenticar[0].email,
                             // nome: resultadoAutenticar[0].nome,
+                            id: resultadoAutenticar[0].id,
+                            email: resultadoAutenticar[0].email,
                             senha: resultadoAutenticar[0].senha,
                         });
                         //             } 

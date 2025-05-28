@@ -24,14 +24,12 @@ const caracterer = [
 // para facilitar:
 const createElement = (tag, className) => {
 
-
-
-
     const element = document.createElement(tag);
     element.className = className;
     return element;
 
 }
+
 
 // let porque mudam ao longo do script 
 let firstCard = '';
@@ -41,7 +39,7 @@ const checkEndGame = () => {
     // pega todos os elementos e salva em um array 
     const disableCards = document.querySelectorAll('.disabled-card');
 
-    if (disableCards.lenght == 24) {
+    if (disableCards.lenght === 24) {
 
         clearInterval(this.loop);
         alert(`Parabens, ${Spanplayer} você conseguiu! \n Seu tempo foi:${timer.innerHTML}`);

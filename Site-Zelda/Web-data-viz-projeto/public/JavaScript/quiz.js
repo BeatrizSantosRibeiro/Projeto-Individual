@@ -205,9 +205,34 @@ nextButton.addEventListener("click", () => {
         handleNextButton();
     }
     else {
-        startQuiz();
-    }
-})
+        
+        fetch("/quiz/salvarquiz", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                pontuacaoServer: pontuacao,
+                fkUsuarioServer: sessionStorage.ID_USUARIO
+                
+            }),
+        })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+            
+        })
+        
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            
+            startQuiz();
+            
+        });
+        
+ }})
+
 
 startQuiz();
 
