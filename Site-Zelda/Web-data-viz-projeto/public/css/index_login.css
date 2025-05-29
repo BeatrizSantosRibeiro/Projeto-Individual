@@ -80,3 +80,7 @@ footer {
     justify-content: space-around;
     background-color: rgba(35, 65, 9, 0.677);
 }
+
+span{
+    color: aliceblue;
+}

@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url("https://wallpapers.com/images/hd/hd-aesthetic-link-breath-of-the-wild-6cf65acbjyd478da.webp");
+    /* background-image: url("https://wallpapers.com/images/hd/hd-aesthetic-link-breath-of-the-wild-6cf65acbjyd478da.webp"); */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -16,17 +16,19 @@ body{
     max-width: 600px;
     margin: 90px auto 0;
     padding: 30px;
+    background-color: #06415cc3;
+    border-radius: 15px;
 }
 
 .app h1{
     font-weight: 25px;
-    color: blue;
+    color: rgb(0, 0, 0);
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
 }
 
 .quiz h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: rgb(37, 37, 92);
 font-weight: 600;
 }

@@ -15,13 +15,15 @@
         
         <section class="banner">
             <img src="/Imagens/logobotao.png" id="logo" onclick="botãologo()">
+             <h3>Olá, <span id="valorArmazenado">usuário</span>!</h3>
+
 
 
             <div class="container" id="img">
             <a href="jogomemoria_login.html"><img src="/Imagens/index-login/Jogo da Memória.jpg" alt="" id="imgs"></a>
             <a href="quiz.html"><img src="/Imagens/index-login/Quiz.jpg" alt="" id="imgs"></a>
             <img src="/Imagens/index-login/container3.jpg" alt="" id="imgs">
-            <img src="/Imagens/index-login/Dashboard.jpg" alt="" id="imgs">
+             <a href="dashboard.html"><img src="/Imagens/index-login/Dashboard.jpg" alt="" id="imgs"></a> 
 
             </div>    
             <br><br>  
@@ -37,8 +39,11 @@
 
 <script>
 
+const valorArmazenado = localStorage.getItem("NOME_USUARIO");
 
-
-
-
+    // Atualizar o elemento HTML com o valor
+    const elemento = document.getElementById("valorArmazenado");
+    if (elemento) {
+      elemento.textContent = valorArmazenado || "Nenhum valor armazenado";
+    }
 </script>
