@@ -81,3 +81,14 @@ p a {
     align-items: flex-end;
     padding: 60px;
 }
+
+footer {
+    /* margin-top: 900px; */
+    display: flex;
+    color: white;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(35, 65, 9, 0.677);
+}

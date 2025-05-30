@@ -5,8 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/sobre_mim.css">
 </head>
 <body>
-    
+   
+    <header id="header">
+        <div class="container">
+
+            <div class="flex">
+
+                <img src="/Imagens/logobotao.png" id="logo" onclick="botãologo()">
+
+                <nav>
+                    <ul>
+                        <li> <a href="história.html">História</a></li>
+                        <li> <a href="personagens.html">Personagem</a></li>
+                        <li> <a href="sobremim.html">Sobre mim</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
 </body>
 </html>
+
+<script>
+   window.addEventListener('scroll', function () {
+
+        // Classe rolagem ser adicionada sempre que tiver uma rolagem eixo y, e posição ser maior que 0
+        var header = document.querySelector('#header')
+        header.classList.toggle('rolagem', window.scrollY > 50)
+
+        // se o mudar o utimo valor ele demora mais para transformar
+    })
+
+
+
+
+</script>

@@ -4,46 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
-         <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
+    <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
+    <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
     <title>Document</title>
     <link rel="stylesheet" href="/css/index_login.css" class="">
 </head>
 
 <body>
     <header id="header">
-        
+
         <section class="banner">
             <img src="/Imagens/logobotao.png" id="logo" onclick="botãologo()">
-             <h3>Olá, <span id="valorArmazenado">usuário</span>!</h3>
-
+            <div id="container">
+                <center>
+                    <h3>Bem-vindo de volta <span id="b_usuario">usuário</span>!</h3>
+                </center>
+            </div>
 
 
             <div class="container" id="img">
-            <a href="jogomemoria_login.html"><img src="/Imagens/index-login/Jogo da Memória.jpg" alt="" id="imgs"></a>
-            <a href="quiz.html"><img src="/Imagens/index-login/Quiz.jpg" alt="" id="imgs"></a>
-            <img src="/Imagens/index-login/container3.jpg" alt="" id="imgs">
-             <a href="dashboard.html"><img src="/Imagens/index-login/Dashboard.jpg" alt="" id="imgs"></a> 
+                <a href="jogomemoria_login.html"><img src="/Imagens/index-login/Jogo da Memória.jpg" alt=""
+                        id="imgs"></a>
+                <a href="quiz.html"><img src="/Imagens/index-login/Quiz.jpg" alt="" id="imgs"></a>
+                <img src="/Imagens/index-login/container3.jpg" alt="" id="imgs">
+                <a href="dashboard.html"><img src="/Imagens/index-login/Dashboard.jpg" alt="" id="imgs"></a>
 
-            </div>    
-            <br><br>  
+            </div>
+            <br><br>
         </section>
         <footer>
-        
-                Beatriz Ribeiro | direitos Reservados | 2025
+
+            Beatriz Ribeiro | direitos Reservados | 2025
         </footer>
-    </header>      
+    </header>
 </body>
 
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-const valorArmazenado = localStorage.getItem("NOME_USUARIO");
+ function botãologo() {
 
-    // Atualizar o elemento HTML com o valor
-    const elemento = document.getElementById("valorArmazenado");
-    if (elemento) {
-      elemento.textContent = valorArmazenado || "Nenhum valor armazenado";
+        window.location.href = "index.html";
+
     }
+   
 </script>

@@ -74,13 +74,23 @@ img {
 footer {
     display: flex;
     color: white;
-    height: 40px;
+    height: 70px;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     background-color: rgba(35, 65, 9, 0.677);
 }
 
-span{
-    color: aliceblue;
+span,h3{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.677);
+    width: 500px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    border-radius: 16px;   
+    font-family: "MinishCap | v1.0";
+    letter-spacing: 4px;  
 }
+

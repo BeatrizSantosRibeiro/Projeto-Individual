@@ -1,0 +1,120 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    /* background-color: rgb(29, 29, 29); */
+    background-image: url(/Imagens/sobreMim/fundo2.jpg);
+    /* background-size: cover; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    height: 3000px;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+    letter-spacing: 3px;
+    margin-top: 54px;
+
+}
+
+img {
+    /* margin-top: -45px; */
+    margin-left: -80px;
+    height: 185px;
+    width: 115px;
+    transition: 2s;
+}
+
+#logo,
+header {
+    margin-top: -57px;
+
+}
+
+
+
+#logo:hover {
+    content: url(../Imagens/logobotaohover.png);
+}
+
+
+header {
+    width: 100%;
+    padding: 61px 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 2s;
+    color: #ffffff
+}
+
+header i {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+header ul {
+    list-style-type: none;
+    margin-left: 60px;
+    padding-left: 70px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'triforce';
+    font-size: 28px;
+    align-items: flex-start;
+}
+
+header.rolagem {
+    background-color: rgba(14, 61, 81, 0.952);
+    opacity: 100%;
+    padding: 15px 4%;
+    height: 150px;
+
+}
+
+
+header.rolagem ul a img {
+    opacity: 40%;
+}
+
+
+header.rolagem a {
+    /* background-color: blue; */
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    transition: 2s;
+}
+
+header.rolagem ul {
+    margin-top: -90px;
+    margin-top: 25px;
+    margin-left: 125px;
+    /* margin-top: 54px; */
+    transition: 2s;
+    align-items: center;
+
+}
+
+header.rolagem #logo {
+    margin-top: -20px;
+    content: url(../Imagens/logobotao.png);
+    height: 105px;
+    width: 70px;
+}
