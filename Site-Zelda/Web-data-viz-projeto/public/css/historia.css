@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .container {
@@ -21,7 +20,10 @@ body {
     align-items: flex-start;
     letter-spacing: 3px;
     margin-top: 54px;
+}
 
+#titulo{    
+font-family: "MinishCap | v1.0";
 }
 
 img {
@@ -32,13 +34,10 @@ img {
     transition: 2s;
 }
 
-#logo,
-header {
+#logo, header {
     margin-top: -57px;
 
 }
-
-
 
 #logo:hover {
     content: url(../Imagens/logobotaohover.png);
@@ -71,6 +70,7 @@ header ul li {
     margin: 0 40px;
 }
 
+
 header ul li a {
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -79,12 +79,12 @@ header ul li a {
     align-items: flex-start;
 }
 
+
 header.rolagem {
     background-color: rgba(14, 61, 81, 0.952);
     opacity: 100%;
     padding: 15px 4%;
     height: 150px;
-
 }
 
 
@@ -99,6 +99,12 @@ header.rolagem a {
     font-size: 24px;
     transition: 2s;
 }
+
+header.rolagem a:hover{
+color:rgb(170, 193, 255);
+transition: 0.2S;
+}
+
 
 header.rolagem ul {
     margin-top: -90px;
@@ -116,6 +122,11 @@ header.rolagem #logo {
     height: 105px;
     width: 70px;
 }
+
+header.rolagem #logo:hover {
+    content: url(../Imagens/logobotaohover.png);
+}
+
 
 .banner {
     height: 97vh;
@@ -152,7 +163,6 @@ h2 {
     margin: 60px;
 }
 
-
 #tópicos {
     color: rgb(0, 0, 0);
     font-size: 58px;
@@ -165,9 +175,7 @@ a:hover {
     color: rgb(170, 193, 255);
 }
 
-
-#tópicos,
-a {
+#tópicos, a {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -227,7 +235,6 @@ img {
     margin-left: 40px;
 }
 
-
 .textohist2 {
     display: flex;
     width: 50%;
@@ -258,8 +265,6 @@ img {
     background-position: top;
 }
 
-
-
 .bestadivina3 {
     display: flex;
     width: 100%;
@@ -275,7 +280,6 @@ img {
     margin-top: 30px;
     margin-left: 40px;
 }
-
 
 .bestadivina4 {
     display: flex;
@@ -393,11 +397,10 @@ img {
     /* margin: 68px; */
 }
 
-#cor{
+#cor {
     border-radius: 4px;
     width: 95%;
     height: 92px;
-    background-color:rgb(255, 214, 127);
     padding: 4px;
 }
 
@@ -431,5 +434,5 @@ footer {
     justify-content: space-around;
     background-color: rgba(89, 43, 43, 0.285);
     margin-top: 520px;
-    
+
 }

@@ -3,16 +3,18 @@ var router = express.Router();
 
 var memoriaController = require("../controllers/memoriaController");
 
-
-router.post("/jogomemoria", function (req, res) {
+router.post("/salvarmemoria", function (req, res) {
     // função a ser chamada quando acessar /carros/cadastrar
-    memoriaController.cadastrar(req, res)
+    memoriaController.salvartimer(req, res);
 });
 
 
-router.get("/listar", function (req, res) {
-    // função a ser chamada quando acessar /carros/listar
-    memoriaController.listar(req, res);
+router.get("/ultimotemporegis/:idUsuario", function (req, res) {
+    memoriaController.ultimotemporegis(req, res);
+});
+
+router.get("/ultimapontuacaoregis/:idUsuario", function (req, res) {
+    memoriaController.ultimapontuacaoregis(req, res);
 });
 
 module.exports = router;

@@ -2,25 +2,59 @@
 
 var database = require("../database/config")
 
-function listar() {
+
+function salvarmemoria(tempo, fkUsuarios) {
     var instrucao = `
-        SELECT * FROM memoria;
+        INSERT INTO TentativaMemoria (tempo, fkUsuarios, fkMemoria) VALUES ('${tempo}', '${fkUsuarios}', 1);
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
-function cadastrar(nome) {
-    var instrucao = `
-        INSERT INTO memoria (nome, tempo,fkUsuario) VALUES ('${nome}','${tempo}','${fkUsuario}');
-    `;
+
+
+function obterestatisticas(idUsuario) {
+    var instrucao =
+        `select tempo, date_format(data_jogada, '%d%m') as data
+    from TentativaMemoria
+    where fkUsuarios = ${idUsuario}
+    order by data_jogada desc
+    limit 10;`;
+
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+
+function ultimotemporegis(idUsuario) {
+    var instrucao =
+        `SELECT tempo as ultimotemporegis
+    FROM TentativaMemoria
+    WHERE fkUsuarios = ${idUsuario}
+    ORDER BY data_jogada DESC
+    LIMIT 1`;
+
+    console.log("Executando SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function ultimapontuacaoregis(idUsuario) {
+    var instrucao =
+        `SELECT pontuacao as ultimapontuacao
+    FROM TentativaQuiz
+    WHERE fkUsuarios = ${idUsuario}
+    ORDER BY pontuacao DESC
+    LIMIT 1;`;
+
+    console.log("Executando SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 
 // exportar as funções que criamos para serem vistas por outros arquivos
 
 module.exports = {
-    cadastrar,
-    listar
+    salvarmemoria,
+    obterestatisticas,
+    ultimotemporegis,
+    ultimapontuacaoregis
 };

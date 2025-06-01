@@ -11,18 +11,10 @@ main{
     background-image: url(../Imagens/imagem-jogomemoria/backgrundcarta.gif);
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(199, 140, 255); */
     background-position: 0;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
-    
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* padding: 15px 15px 20px; */
-    /* margin-left: -60px; */
-    
-
 }
 
 
@@ -50,9 +42,7 @@ header{
     gap: 20px;
     padding: 15px 150px 35px;
     align-items: center;
-    margin-left: 28px;
-    
-    
+    margin-left: 28px;   
 }
 
 .card{
@@ -63,8 +53,7 @@ header{
     position: relative;
     transform-style:preserve-3d ;
     aspect-ratio: 3/4;
-    border-radius: 5px ;
-    
+    border-radius: 5px ;  
 }
 
 .face{
@@ -81,7 +70,6 @@ header{
 
 .back{
     background-image: url('../Imagens/imagem-jogomemoria/bbbbbbb.jpeg');
-  
     backface-visibility: hidden;
 }
 
@@ -90,11 +78,11 @@ header{
     background-repeat: none;
     background-position-y: -2px;
     background-repeat: no-repeat;
-
 }
+
+
 .reveal-card {
     transform: rotateY(180deg);
-    
 }
 
 

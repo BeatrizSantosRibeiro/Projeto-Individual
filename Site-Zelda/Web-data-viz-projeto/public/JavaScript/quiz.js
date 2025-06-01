@@ -16,7 +16,7 @@ const questions = [
         question: "O inimigo do jogo é?",
         answers: [
             { id: 1, texto: "Ganondorf", correct: false },
-            { id: 2, texto: "Calamit Ganon", correct: true },
+            { id: 2, texto: "Calamity Ganon", correct: true },
             { id: 3, texto: "Zant", correct: false },
             { id: 4, texto: "Os Guardiões", correct: false },
             { id: 5, texto: "Bestas divinas", correct: false }
@@ -104,7 +104,7 @@ const questions = [
             { id: 1, texto: "Foi quando o Ganondorf ficou rei de Hyrule", correct: false },
             { id: 2, texto: "Não existiu", correct: false },
             { id: 3, texto: "Foi quando Zelda desapareceu", correct: false },
-            { id: 4, texto: "Foi quando Hyrule foi atacada e todos os campeões, com excessão de link, morreram", correct: true },
+            { id: 4, texto: "Foi quando Hyrule foi atacada e todos os campeões, com excesão de Link, morreram", correct: true },
         ]
     },
 
@@ -156,7 +156,7 @@ function showQuestion() {
 
 function selectAnswer(e) {
     // pega as respostas da pergunta atual e le qual resposta está certa 
-    answers = questions[currentQuestionIndex].answers;
+    const answers = questions[currentQuestionIndex].answers;
 
     const correctAnswer = answers.filter((answer) => answer.correct == true)[0];
 
@@ -173,6 +173,10 @@ function selectAnswer(e) {
 
     // trava os botões e aparecer o botão para proxima questão
     Array.from(answersButtons.children).forEach((button) => {
+        if (button.dataset.id == correctAnswer.id){
+            button.classList.add("correct");
+        }
+
         button.disabled = true;
     });
 
@@ -184,8 +188,14 @@ function selectAnswer(e) {
 function showScore() {
     resetState();
     questionElement.innerHTML = `Voce acertou ${pontuacao} de ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
+    nextButton.innerHTML = "Jogar novamente";
     nextButton.style.display = "block";
+
+
+    sessionStorage.setItem("pontuação", pontuacao);
+    sessionStorage.setItem("total", questions.length);
+
+    atualizarGrafico(pontuacao, questions.length);
 }
 
 function handleNextButton() {
@@ -215,12 +225,14 @@ nextButton.addEventListener("click", () => {
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 pontuacaoServer: pontuacao,
-                fkUsuarioServer: sessionStorage.ID_USUARIO
+                fkUsuariosServer: sessionStorage.ID_USUARIO
                 
             }),
         })
         .then(function (resposta) {
             console.log("resposta: ", resposta);
+
+            startQuiz();
             
         })
         

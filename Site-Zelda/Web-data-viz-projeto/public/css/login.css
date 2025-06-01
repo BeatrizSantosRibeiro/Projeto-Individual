@@ -6,7 +6,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-attachment: fixed;
-    
+
 }
 
 
@@ -18,43 +18,43 @@ body {
     border-radius: 10%;
     margin-top: 12px;
     opacity: 100%;
-}   
+    font-family: "MinishCap | v1.0";
+    font-size: large;
+}
 
-#button_finalizar:hover{
+#button_finalizar:hover {
     background-color: rgb(115, 139, 212);
     border-radius: 4px;
     /* margin-left: 39%; */
 }
 
 
-a{
+a {
     padding: 59px;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 28px;
-   
-} 
+}
 
 
-#logo{
-    
+#logo {
+
     height: 185px;
     width: 115px;
     align-items: flex-start;
     padding-left: 1px;
     padding-top: 110px;
     cursor: pointer;
-    
 }
 
 
 #botãologo {
-   padding-top: -400px;
+    padding-top: -400px;
     all: unset;
 }
 
 
-.nav{
+.nav {
     display: flex;
     margin-top: -142px;
     justify-content: space-between;
@@ -69,30 +69,28 @@ a{
 }
 
 
-.logo_aaa{
+.logo_aaa {
     margin-top: -108px;
     margin-left: 10px;
 }
 
 
 #logo:hover {
-    content: url(../Imagens/logobotaohover.png);  
+    content: url(../Imagens/logobotaohover.png);
 }
 
 
 a:hover {
     color: rgb(109, 146, 249);
-
 }
 
-#agora{
-   
+
+#agora {
     color: rgb(83, 146, 255);
-
 }
 
 
-.container input,.text{
+.container input,.text {
     justify-content: center;
     display: flex;
     /* height: 555px; */
@@ -101,11 +99,11 @@ a:hover {
     background-color: rgb(0, 0, 0);
     opacity: 70%;
     border-radius: 13px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 
-input, .texto {
+input,.texto {
     opacity: 100%;
     position: relative;
     z-index: 1000;
@@ -115,33 +113,29 @@ input, .texto {
     width: 400px;
     height: 324px;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 4px;
     margin-left: 11px;
-     
 }
-input{
+
+
+input {
     font-size: 17px;
 }
 
-@font-face {
-    font-family: 'minishcap';
-    src: url('../fontes/minishcap/minishcap__v10.ttf') format('truetype');
-}
 
-
-
-h2{
+h2 {
     margin-top: 45px;
     margin-left: 138px;
     letter-spacing: 5px;
-    font-family:'minishcap', sans-serif;
-    color: rgb(255, 246, 143);;
+    font-family: "MinishCap | v1.0";
+    color: rgb(0, 0, 0);
+    font-size: 35px;
 }
 
 
-#bloco{
-    background-color: black ;
+#bloco {
+    backdrop-filter: blur(35px);
     opacity: 80%;
     position: relative;
     z-index: 1;
@@ -150,21 +144,19 @@ h2{
     margin-left: 330px;
     margin-top: -3px;
     border-radius: 10px;
-    border:solid;
-    border-color: white ;
+    border: solid;
+    border-color: rgb(26, 87, 102);
 }
 
 
-#email_input:hover{
+#email_input:hover {
     border-radius: 20%;
     border-radius: 63;
     border-color: rgb(149, 177, 255);
-    
 }
 
 
-
-#senha_input:hover{
+#senha_input:hover {
     border-radius: 20%;
     border-radius: 63;
     border-color: rgb(149, 177, 255);
@@ -173,8 +165,12 @@ h2{
 
 #mensagem_erro {
     margin-top: 3px;
-    color:rgb(59, 169, 237);
+    color: rgb(1, 12, 16);
     font-size: 21px;
     margin-left: 11px;
-   
+    align-items: center;
+    justify-content: center;
+    font-family: "MinishCap | v1.0";
+    font-size: 23px;
 }
+

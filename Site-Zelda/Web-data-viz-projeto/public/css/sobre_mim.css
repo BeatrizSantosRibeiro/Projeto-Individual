@@ -3,8 +3,8 @@ body{
     margin: 0px;
     padding: 0px;
     /* background-color: rgb(29, 29, 29); */
-    background-image: url(/Imagens/sobreMim/fundo2.jpg);
-    /* background-size: cover; */
+    background-image: url("https://i.redd.it/ntx9n25u0se11.jpg");
+    /* background-size: cover;  */
 }
 
 * {
@@ -14,9 +14,6 @@ body{
 
 }
 
-html{
-    height: 3000px;
-}
 
 .flex {
     display: flex;
@@ -37,7 +34,7 @@ img {
 #logo,
 header {
     margin-top: -57px;
-
+    margin-left: 5px;
 }
 
 
@@ -117,4 +114,13 @@ header.rolagem #logo {
     content: url(../Imagens/logobotao.png);
     height: 105px;
     width: 70px;
+}
+
+.container header {
+    display: flex;
+    width: 450px;
+    height: 500px;
+    background-color: #ffffff;
+    size:40px
+    /* backdrop-filter: blur(10px); */
 }

@@ -1,65 +1,73 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    /* background-image: url("https://wallpapers.com/images/hd/hd-aesthetic-link-breath-of-the-wild-6cf65acbjyd478da.webp"); */
+
+body {
+    background-image: url(/Imagens/fundo\ .jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.app{
+
+.app {
+    backdrop-filter: blur(9px);
     /* background-color: white; */
     width: 90%;
     max-width: 600px;
     margin: 90px auto 0;
     padding: 30px;
-    background-color: #06415cc3;
+    background-color: #761d1d59;
     border-radius: 15px;
 }
 
-.app h1{
+
+.app h1 {
     font-weight: 25px;
     color: rgb(0, 0, 0);
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
 }
 
+
 .quiz h2 {
     font-size: 20px;
-    color: rgb(37, 37, 92);
-font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 
-.btn{
+
+.btn {
     background-color: white;
     color: #222;
     font-weight: 500;
     width: 100%;
-    border:1px solid #222;
+    border: 1px solid #222;
     padding: 10px;
     margin: 10px 0;
     text-align: left;
     border-radius: 4px;
-    cursor:pointer;
+    cursor: pointer;
     transition: all 0.3;
-
 }
 
-.btnhover:not([disabled]){
-background-color: #222;
-color: white;
+
+.btnhover:not([disabled]) {
+    background-color: #222;
+    color: white;
 }
 
-.btn:disabled{
+
+.btn:disabled {
     cursor: no-drop;
 }
 
-#nex-bnt{
+
+#nex-bnt {
     background-color: coral;
-    color: white;
+    color: rgb(12, 82, 95);
     font-weight: 500;
     width: 150px;
     border: 0;
@@ -70,9 +78,11 @@ color: white;
     display: none;
 }
 
+
 .correct {
     background-color: rgba(47, 255, 165, 0.719);
 }
+
 
 .incorrect {
     background-color: rgba(253, 115, 115, 0.884);

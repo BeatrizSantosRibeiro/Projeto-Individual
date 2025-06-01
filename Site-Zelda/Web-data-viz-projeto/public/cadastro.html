@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
 
-  <title>AquaTech | Cadastro</title>
+  <title>Cadastro</title>
 
   <link rel="stylesheet" href="/css/cadastro.css">
   <!-- <script src="./js/sessao.js"></script> -->
@@ -43,7 +43,7 @@
           </div>
         </div>
         <button onclick="cadastrar()" id="button_finalizar"> Criar conta </button>
-        <br><br>
+        <br>
 
         <div id="mensagem_erro"></div>
       </div>
@@ -155,7 +155,6 @@
 
 
       });
-
   }
 
 
@@ -172,6 +171,7 @@
     }
   }
 
+  
   function limparSessao() {
     sessionStorage.clear();
     window.location = "login.html";

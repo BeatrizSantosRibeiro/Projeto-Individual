@@ -12,53 +12,50 @@ body {
 
 
 #button_finalizar {
-    position: relative;
-    width: 97px;
+     width: 97px;
     height: 40px;
     margin-left: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 246, 143);
     border-radius: 10%;
     margin-top: 12px;
     opacity: 100%;
-    font-style: italic;
-    z-index: 1000;
-}
-
-#button_finalizar:hover{
-    background-color: rgb(102, 114, 152);
-    border-radius: 0% ;
-    /* margin-left: 39%; */
+    font-family: "MinishCap | v1.0";
+    font-size: large;
 }
 
 
-a{
+#button_finalizar:hover {
+    background-color: rgb(140, 159, 222);
+    border-radius: 0%;
+}
+
+
+a {
     padding: 59px;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 28px;
-   
-} 
+}
 
 
-#logo{
-    
+#logo {
+
     height: 185px;
     width: 115px;
     align-items: flex-start;
     padding-left: 1px;
     padding-top: 110px;
     cursor: pointer;
-    
 }
 
 
 #botãologo {
-   padding-top: -400px;
+    padding-top: -400px;
     all: unset;
 }
 
 
-.nav{
+.nav {
     display: flex;
     margin-top: -142px;
     justify-content: space-between;
@@ -73,30 +70,28 @@ a{
 }
 
 
-.logo_aaa{
+.logo_aaa {
     margin-top: -108px;
     margin-left: 10px;
 }
 
 
 #logo:hover {
-    content: url(../Imagens/logobotaohover.png);  
+    content: url(../Imagens/logobotaohover.png);
 }
 
 
 a:hover {
     color: rgb(170, 193, 255);
-
-}
-
-#agora{
-   
-    color:rgb(155, 181, 255);
-
 }
 
 
-.container input,.text{
+#agora {
+    color: rgb(155, 181, 255);
+}
+
+
+.container input, .text {
     justify-content: center;
     display: flex;
     /* height: 555px; */
@@ -105,38 +100,39 @@ a:hover {
     background-color: rgb(0, 0, 0);
     opacity: 85%;
     border-radius: 13px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 
 input, .texto {
-    opacity: 100%;
     position: relative;
-    z-index: 1000;
-    /* background: rgb(255, 255, 255, .2); */
     display: flex;
     flex-direction: column;
     width: 400px;
     height: 410px;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 4px;
     margin-left: 11px;
-     
 }
-input{
+
+
+input {
     font-size: 17px;
 }
 
-h2{
+h2 {
     margin-left: 138px;
     letter-spacing: 5px;
-    font-family:sans-serif
+    font-family: "MinishCap | v1.0";
+    font-size: 37px;
+    z-index: 100px;
 }
 
 
-#bloco{
-    background-color: black ;
+#bloco {
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 211, 145, 0.267);
     opacity: 78%;
     position: relative;
     z-index: 1;
@@ -145,62 +141,62 @@ h2{
     margin-left: 330px;
     margin-top: -54px;
     border-radius: 9px;
-    border:solid;
-    border-color: white ;
+    border: solid;
+    border-color: rgb(255, 243, 116);
 }
 
 
-#input_nome:hover{
+#input_nome:hover {
     border-radius: 20%;
     border-radius: 63;
-    border-color: rgb(149, 177, 255);
+    border-color: rgb(255, 243, 116);
 }
 
 
-#input_email:hover{
+#input_email:hover {
     border-radius: 20%;
     border-radius: 63;
-    border-color: rgb(149, 177, 255);
+    border-color: rgb(255, 243, 116);;
 }
 
 
-#input_telefone:hover{
+#input_telefone:hover {
     border-radius: 20%;
     border-radius: 63;
-    border-color: rgb(149, 177, 255);
+    border-color: rgb(255, 243, 116);;
 }
 
 
-#input_senha:hover{
+#input_senha:hover {
     border-radius: 20%;
     border-radius: 63;
-    border-color: rgb(149, 177, 255);
+    border-color: rgb(255, 243, 116);;
 }
 
 
- #input_confirsenha:hover{
+#input_confirsenha:hover {
     border-radius: 20%;
     border-radius: 63;
-    border-color: rgb(149, 177, 255);
+    border-color: rgb(255, 243, 116);;
 }
 
 #mensagem_erro {
     margin-top: 13px;
-    color:rgb(255, 251, 121);
+    color: rgb(0, 0, 0);
     font-size: 21px;
     margin-left: 11px;
     justify-content: center;
+    font-family: "MinishCap | v1.0" ;
+    font-size: 26px;
 }
 
 
 #div_erros_login {
-  display: none
+    display: none
 }
 
-/* FORMULARIO */
 
-.alerta_erro{
-  display: flex;
-  justify-content: flex-end;
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
 }
-

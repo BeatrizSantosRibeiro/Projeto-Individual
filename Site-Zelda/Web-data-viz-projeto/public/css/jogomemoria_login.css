@@ -1,16 +1,10 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     border: 0;
     font-family: 'tingle-tuner', sans-serif;
-
 }
 
-
-@font-face {
-    font-family: 'tingle-tuner';
-    src: url('../fontes/tingle-tuner/tingle_tuner.ttf') format('truetype');
-}
 
 .login_header{
     display: flex;
@@ -19,6 +13,7 @@
     justify-content: center;
     margin-bottom: 5px;
 }
+
 
 .login-form{
     margin-top:-38px;
@@ -29,16 +24,18 @@
     justify-content: center;
 }
 
+
 .login_header img{
     align-items: center;
     width: 250px;
 }
 
+
 .login_header h1{
 font-size: 1.5em;
 color:#27461e;
-
 }
+
 
 .input_nome{
 border:2px solid #333;
@@ -50,6 +47,7 @@ width: 100%;
 padding:10px;
 margin-bottom: 15px;
 }
+
 
 .login_button{
     display: flex;
@@ -64,12 +62,15 @@ margin-bottom: 15px;
     justify-content: center; 
 }
 
+
 .login_button:hover{
     background-color: #eec628;
     transition: 1.0s;
 }
 
+
 .login_button:disabled{
     background-color: #eee;
     color: #aaa;
 }
+ */

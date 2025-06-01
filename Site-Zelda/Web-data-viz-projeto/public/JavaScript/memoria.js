@@ -16,18 +16,14 @@ const caracterer = [
     'urbosapixelart',
     'yunobopixelart',
     'zeldapixelart',
-   
 ]
 
 
-
 // para facilitar:
-const createElement = (tag, className) => {
-
+    const createElement = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
     return element;
-
 }
 
 
@@ -37,15 +33,42 @@ let secondCard = '';
 
 const checkEndGame = () => {
     // pega todos os elementos e salva em um array 
-    const disableCards = document.querySelectorAll('.disabled-card');
+    const disableCards = document.querySelectorAll('.face.disable-card');
 
-    if (disableCards.lenght == 24) {
+    if (disableCards.length == 24) {
 
         clearInterval(this.loop);
-        alert(`Parabens, ${Spanplayer} você conseguiu! \n Seu tempo foi:${timer.innerHTML}`);
+        setInterval(
+        alert(`Parabens, ${Spanplayer.innerHTML} você conseguiu! \n Seu tempo foi:${timer.innerHTML}`),
+       500 );
 
-    }
-}
+
+            fetch("/memoria/salvarmemoria", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    timerServer: timer.innerHTML,
+                    fkUsuariosServer: sessionStorage.ID_USUARIO
+                    
+                }),
+            })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+                
+            })
+            
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                
+                loadGame();
+                
+            });
+            
+    }}
 
 const checkCards = () => {
     // recuperando os valores atribuidos no let (lá em baixo) 
@@ -73,12 +96,10 @@ const checkCards = () => {
 
             firstCard = '';
             secondCard = '';
-
+            
         }, 500);
 
-
-    }
-}
+    }}
 
 
 // criando a variavel do revelcard de baixo 
@@ -101,9 +122,8 @@ const revealCard = ({ target }) => {
         checkCards();
     }
 
-
-
 }
+
 
 const createCard = (caracterer) => {
     // criando elementos
@@ -125,7 +145,7 @@ const createCard = (caracterer) => {
 
     card.addEventListener('click', revealCard) // colocar o evento de virar ao ser clicado(css)
 
-    card.setAttribute('data-caracterer', caracterer)
+    card.setAttribute('data-caracterer', caracterer);
 
     return card;
 
@@ -146,11 +166,22 @@ const loadGame = () => {
         const card = createCard(caracterer);
         grid.appendChild(card);
     });
+
+    const allCards = document.querySelectorAll('.card');
+
+     setTimeout(() => {
+        allCards.forEach((card) => card.classList.add('reveal-card'));
+    }, 300);
+
+    setTimeout(() => {
+        allCards.forEach((card) => card.classList.remove('reveal-card'));
+    }, 2000);
+
 }
 
 const StartTimer = () => {
     //this é uma chave para conseguir acessar em outra função(endgame), como se fosse um id 
-  this.loop  =  setInterval(() => {
+    this.loop = setInterval(() => {
 
         // tempo atual é o que está dentro do innerhtml 
         const currentTime = Number(timer.innerHTML);
@@ -169,7 +200,7 @@ window.onload = () => {
     // pegar o nome do localstorage que o usuario colocou 
     const playerName = localStorage.getItem('player');
     // getIten recupera valor 
-    Spanplayer.innerHTML = playerName;
+      Spanplayer.innerHTML = sessionStorage.NOME_USUARIO;
     StartTimer();
     loadGame();
 }

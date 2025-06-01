@@ -1,14 +1,14 @@
 body {
     background-image: url(../Imagens/fundo1-paginainicial.jpg); 
     background-size: cover;
-
 }
+
 
 * {
     margin: 0;
     padding: 0;
-
 }
+
 
 a {
     padding: 2px;
@@ -19,9 +19,15 @@ a {
     justify-content: space-around;
 }
 
+
+a li {
+    font-size: 33px;
+}
+
 a:hover {
     color: rgb(170, 193, 255);
 }
+
 
 
 #logo {
@@ -34,10 +40,11 @@ a:hover {
     cursor: pointer;
 }
 
+
 #botãologo {
     all: unset;
-
 }
+
 
 #logo:hover {
     content: url(../Imagens/logobotaohover.png);
@@ -82,8 +89,8 @@ p a {
     padding: 60px;
 }
 
+
 footer {
-    /* margin-top: 900px; */
     display: flex;
     color: white;
     height: 70px;
