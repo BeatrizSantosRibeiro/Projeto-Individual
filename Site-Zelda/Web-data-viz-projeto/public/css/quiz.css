@@ -83,7 +83,14 @@ body {
     background-color: rgba(47, 255, 165, 0.719);
 }
 
-
 .incorrect {
     background-color: rgba(253, 115, 115, 0.884);
+}
+
+#voltar{
+    margin: 30px;
+    background-color: rgb(14, 101, 177);
+    width: 100px;
+    height: 45px;
+    border-radius: 20px;
 }

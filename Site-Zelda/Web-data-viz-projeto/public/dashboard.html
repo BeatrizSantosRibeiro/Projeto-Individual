@@ -63,7 +63,7 @@
             </div>
 
             <div class="card1">
-                Total de vezes jogadas no jogo da Memória: <br><span id="totalJogadas"></span>
+                Total de vezes jogadas no jogo da Memória: <br><span id="totalJogadasmemo"></span>
             </div>
 
 
@@ -73,7 +73,7 @@
 
 
             <div class="card1">
-                <p> Tempo médio de conclusão no jogo da Memória: <br><span id="mediatempoMemoria"></span></p>
+                <p> Tempo médio de conclusão no jogo da Memória: <br><span id="mediamemoria"></span></p>
             </div>
 
             <div class="card1">
@@ -106,7 +106,9 @@
 
 <script>
 
-    const idUsuario = sessionStorage.ID_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var idUsuario = sessionStorage.ID_USUARIO;
 
 
     fetch(`/quiz/contarjogadas/${idUsuario}`)
@@ -118,7 +120,7 @@
         })
 
         .catch(erro => {
-            console.error("Erro ao carregar dados do gráfico:", erro);
+            console.error("Erro ao carregar dados", erro);
         });
 
 
@@ -128,12 +130,12 @@
         .then(res => res.json())
         .then(function (resposta) {
             var ultimotempouser = document.getElementById('ultimotempo');
-            ultimotempouser.innerHTML = `${resposta[0].ultimotemporegis}`
+            ultimotempouser.innerHTML = `${resposta[0].ultimotemporegis} Segundos`
 
         })
 
         .catch(erro => {
-            console.error("Erro ao carregar dados do gráfico:", erro);
+            console.error("Erro ao carregar dados", erro);
         });
 
 
@@ -141,12 +143,42 @@
     fetch(`/memoria/ultimapontuacaoregis/${idUsuario}`)
         .then(res => res.json())
         .then(function (resposta) {
+            console.log(resposta)
             var ultimapontuacaouser = document.getElementById('ultimaPontuacao');
-            ultimapontuacaouser.innerHTML = `${resposta[0].ultimapontuacaoregis}`
+            ultimapontuacaouser.innerHTML = `${resposta[0].ultimapontuacao}`
         })
 
         .catch(erro => {
-            console.error("Erro ao carregar dados do gráfico:", erro);
+            console.error("Erro ao carregar dados", erro);
+        });
+
+
+
+    fetch(`/memoria/contarjogadasmemo/${idUsuario}`)
+        .then(res => res.json())
+        .then(function (resposta) {
+            var totalJogadasmemo = document.getElementById('totalJogadasmemo');
+            totalJogadasmemo.innerHTML = `${resposta[0].totaljogadasmemo}`
+
+        })
+
+        .catch(erro => {
+            console.error("Erro ao carregar dados", erro);
+        });
+
+        
+
+          fetch(`/memoria/mediamemoria/${idUsuario}`)
+        .then(res => res.json())
+        .then(function (resposta) {
+            console.log(resposta)
+            var mediatotalmemo = document.getElementById('mediamemoria');
+            mediatotalmemo.innerHTML = `${resposta[0].tempomedio} Segundos`
+
+        })
+
+        .catch(erro => {
+            console.error("Erro ao carregar dados", erro);
         });
 
 
@@ -157,7 +189,7 @@
 
         .then(data => {
 
-            document.getElementById('ultimaPontuacao').innerHTML = data.ultimaPontuacao;
+            // document.getElementById('ultimaPontuacao').innerHTML = data.ultimaPontuacao;
             document.getElementById('mediaPontuacao').innerHTML = data.mediaPontuacao;
 
 

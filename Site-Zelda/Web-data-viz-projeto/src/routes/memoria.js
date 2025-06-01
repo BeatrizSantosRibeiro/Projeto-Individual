@@ -17,4 +17,13 @@ router.get("/ultimapontuacaoregis/:idUsuario", function (req, res) {
     memoriaController.ultimapontuacaoregis(req, res);
 });
 
+router.get("/contarjogadasmemo/:idUsuario", function (req, res) {
+    memoriaController.contarJogadasmemo(req, res);
+});
+
+
+router.get("/mediamemoria/:idUsuario", function (req, res) {
+    memoriaController.mediamemoria(req, res);
+});
+
 module.exports = router;

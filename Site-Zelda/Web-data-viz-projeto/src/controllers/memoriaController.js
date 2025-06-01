@@ -79,9 +79,42 @@ function ultimapontuacaoregis(req, res) {
         });
 }
 
+
+function contarJogadasmemo(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    memoriaModel.contarJogadasmemo(idUsuario)
+    .then(resultado => {
+        res.json(resultado);
+        console.log("resultado controller",resultado)
+    })
+    .catch(erro => {
+        console.error("Erro ao contar jogadas", erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
+function mediamemoria(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    memoriaModel.mediamemoria(idUsuario)
+    .then(resultado => {
+        res.json(resultado);
+        console.log("resultado controller",resultado)
+    })
+    .catch(erro => {
+        console.error("Erro ao contar jogadas", erro);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
 module.exports = {
     salvartimer,
     obterestatisticas,
     ultimotemporegis,
-    ultimapontuacaoregis
+    ultimapontuacaoregis,
+    contarJogadasmemo,
+    mediamemoria
 }

@@ -50,11 +50,31 @@ function ultimapontuacaoregis(idUsuario) {
 }
 
 
+function contarJogadasmemo(idUsuario) {
+    var instrucao = `
+        SELECT COUNT(*) AS totaljogadasmemo FROM TentativaMemoria WHERE fkUsuarios = ${idUsuario};
+    `;
+    console.log("Executando SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function mediamemoria(idUsuario) {
+    var instrucao = `
+        select truncate(avg(tempo),1) as tempomedio from TentativaMemoria
+    where fkUsuarios = ${idUsuario};
+    `;
+    console.log("Executando SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 // exportar as funções que criamos para serem vistas por outros arquivos
 
 module.exports = {
     salvarmemoria,
     obterestatisticas,
     ultimotemporegis,
-    ultimapontuacaoregis
+    ultimapontuacaoregis,
+    contarJogadasmemo,
+    mediamemoria
 };
