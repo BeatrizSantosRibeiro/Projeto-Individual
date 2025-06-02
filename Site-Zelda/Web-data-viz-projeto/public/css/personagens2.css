@@ -89,6 +89,10 @@ header ul li a {
     align-items: flex-start;
 }
 
+header.rolagem a:hover{
+color:rgb(170, 193, 255);
+transition: 0.01s;
+}
 
 header.rolagem {
     background-color: rgb(61, 41, 41);
@@ -129,11 +133,13 @@ header.rolagem img {
 
 
 .banner {
-    height: 100vh;
+    height: 90vh;
     background-image: url(/Imagens/personagens/bannerpersonagens.png);
     /* background-position: center; */
+     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     margin-top: -48px;
     height: 770px;
 }

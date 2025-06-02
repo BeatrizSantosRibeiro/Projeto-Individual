@@ -81,7 +81,7 @@ header ul li a {
 
 
 header.rolagem {
-    background-color: rgba(14, 61, 81, 0.952);
+    background-color: rgb(61, 41, 41);
     opacity: 100%;
     padding: 15px 4%;
     height: 150px;
@@ -102,7 +102,7 @@ header.rolagem a {
 
 header.rolagem a:hover{
 color:rgb(170, 193, 255);
-transition: 0.2S;
+transition: 0.01s;
 }
 
 
@@ -129,14 +129,14 @@ header.rolagem #logo:hover {
 
 
 .banner {
-    height: 97vh;
+    height: 100vh;
     background-image: url();
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -3;
-    background-image: url(/Imagens/download\ aaaaaa\(6\)\ \(2\).jpeg);
+    background-image: url(/Imagens/bannerhist.jpeg);
 }
 
 .banner h1 span a #topicos {
@@ -384,7 +384,9 @@ img {
 
 .fim {
     display: flex;
-    background-color: rgba(255, 255, 255, 0.919);
+    background-color:rgba(124, 71, 71, 0.285);
+    color:white;
+    letter-spacing: 1px;
     border: blueviolet;
     /* border-radius: 4px; */
     width: 100%;
@@ -394,6 +396,7 @@ img {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    text-align: justify;
     /* margin: 68px; */
 }
 

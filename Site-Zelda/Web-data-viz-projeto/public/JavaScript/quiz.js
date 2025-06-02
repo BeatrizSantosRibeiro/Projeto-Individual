@@ -187,8 +187,20 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `Voce acertou ${pontuacao} de ${questions.length}!`;
-    nextButton.innerHTML = "Jogar novamente";
+
+    if(pontuacao < 5){
+        questionElement.innerHTML = `nãããão <br>Voce acertou ${pontuacao} de ${questions.length}!<Br>
+        Precisa melhorar`;
+    }
+
+    else if(pontuacao <= 9){
+        questionElement.innerHTML = `Parabéns <br>Voce acertou ${pontuacao} de ${questions.length}!`;
+    }
+
+    else{
+         questionElement.innerHTML = `Parabéns você realmente sabe sobre o jogo<br>Voce acertou ${pontuacao} de ${questions.length}!`;
+    }
+    nextButton.innerHTML = "Finalizar e salvar";
     nextButton.style.display = "block";
 
 

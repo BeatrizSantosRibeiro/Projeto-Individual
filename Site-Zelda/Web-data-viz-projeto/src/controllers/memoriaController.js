@@ -110,11 +110,26 @@ function mediamemoria(req, res) {
 }
 
 
+function mendados(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    memoriaModel.mendados(idUsuario)
+        .then(resultado => {
+            res.json(resultado);
+            console.log("resultado controller", resultado)
+        })
+        .catch(erro => {
+            console.error("Erro ao contar jogadas", erro);
+            res.status(500).json(erro.sqlMessage);
+        });
+}
+
 module.exports = {
     salvartimer,
     obterestatisticas,
     ultimotemporegis,
     ultimapontuacaoregis,
     contarJogadasmemo,
-    mediamemoria
+    mediamemoria,
+    mendados
 }

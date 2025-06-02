@@ -26,4 +26,9 @@ router.get("/mediamemoria/:idUsuario", function (req, res) {
     memoriaController.mediamemoria(req, res);
 });
 
+
+router.get("/mendados/:idUsuario", function (req, res) {
+    memoriaController.mendados(req, res);
+});
+
 module.exports = router;

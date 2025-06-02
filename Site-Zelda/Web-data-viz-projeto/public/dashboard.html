@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
     <title>Dashboard</title>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,7 +16,7 @@
 <body>
     <div class="janela">
         <div class="header-left">
-            <BR>
+
             <h1>Análises</h1>
 
             <div class="hello">
@@ -23,33 +24,33 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="./cards.html">
 
-                    <a href="quiz.html">
-                        <h3>Quiz</h3>
-                    </a>
+                <a href="quiz.html">
+                    <h3>Quiz</h3>
                 </a>
+
             </div>
 
             <div class="btn-nav-white">
 
-                <a href="./mural.html">
+                <a href="jogomemoria_login.html">
                     <h3>Jogo da Memória</h3>
                 </a>
 
             </div>
 
-            <div class="btn-nav">
-
-                <a href="quiz.html"></a>
-                <h3>Voltar</h3>
-
+            <div class="btn-nav-white">
+                <a href="index_login.html">
+                    <h3>Voltar</h3>
+                </a>
             </div>
 
             <BR>
 
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
+            <div class="btn-logout">
+                <a href="index.html">
+                    <h3>Logout</h3>
+                </a>
             </div>
 
         </div>
@@ -59,46 +60,45 @@
         <div class="container">
 
             <div class="card1">
-                Total de vezes jogadas no Quiz: <br><span id="totalJogadas"></span>
+                <p>Vezes jogadas no Quiz: </p>
+                <span id="totalJogadas"> </span>
             </div>
 
             <div class="card1">
-                Total de vezes jogadas no jogo da Memória: <br><span id="totalJogadasmemo"></span>
+                <p> Ultima pontuação atingida no Quiz:</p>
+                <span id="ultimaPontuacao"></span>
+            </div>
+
+            <div class="card1">
+                <p> Pontuação média no Quiz:</p>
+                <span id="mediaPontuacao"></span>
+            </div>
+
+            <div class="card1">
+                Vezes jogadas no jogo da Memória:</p>
+                <span id="totalJogadasmemo"></span>
             </div>
 
 
             <div class="card1">
-                Ultimo tempo registrado no jogo da memória: <br><span id="ultimotempo"></span>
+                Ultimo tempo atingido no jogo da memória:</p>
+                <span id="ultimotempo"></span>
             </div>
 
 
             <div class="card1">
-                <p> Tempo médio de conclusão no jogo da Memória: <br><span id="mediamemoria"></span></p>
+                <p> Tempo médio de conclusão no jogo da Memória:</p>
+                <span id="mediamemoria"></span>
             </div>
-
-            <div class="card1">
-                <p> Ultima pontuação atingida no Quiz: <br><span id="ultimaPontuacao"></span></p>
-            </div>
-
-            <div class="card1">
-                <p> Pontuação média no Quiz: <br><span id="mediaPontuacao"></span></p>
-            </div>
-
 
         </div>
 
-        <h1>Ultimas Pontuações
-            <div class="grafico1">
-                <canvas id="graficoquiz"></canvas>
-            </div>
-        </h1>
-
         <div class="grafico1">
-            <canvas id="graficomemoria"></canvas>
+        <canvas id="graficoquiz"></canvas>
+        <canvas id="graficomememoria"></canvas>
         </div>
 
     </div>
-    <BR><BR>
     </div>
 </body>
 
@@ -122,7 +122,6 @@
         .catch(erro => {
             console.error("Erro ao carregar dados", erro);
         });
-
 
 
 
@@ -166,9 +165,9 @@
             console.error("Erro ao carregar dados", erro);
         });
 
-        
 
-          fetch(`/memoria/mediamemoria/${idUsuario}`)
+
+    fetch(`/memoria/mediamemoria/${idUsuario}`)
         .then(res => res.json())
         .then(function (resposta) {
             console.log(resposta)
@@ -183,41 +182,139 @@
 
 
 
-
-    fetch(`/quiz/dados/${idUsuario}`)
+    fetch(`/quiz/mediaPontuacaoes/${idUsuario}`)
         .then(res => res.json())
+        .then(function (resposta) {
+            console.log(resposta)
+            var mediapontu = document.getElementById('mediaPontuacao');
+            mediapontu.innerHTML = `${resposta[0].mediaPontuacao}`
 
-        .then(data => {
-
-            // document.getElementById('ultimaPontuacao').innerHTML = data.ultimaPontuacao;
-            document.getElementById('mediaPontuacao').innerHTML = data.mediaPontuacao;
-
-
-            new Chart(document.getElementById("graficoquiz"), {
-                type: 'bar',
-                data: {
-                    labels: data.datas,
-                    datasets: [{
-                        data: data.pontuacao,
-                        label: 'Pontuação',
-                        borderColor: 'blue',
-                        backgroundColor: '#1E90FF',
-
-
-                    }]
-                },
-
-
-            });
         })
 
         .catch(erro => {
-            console.error("Erro ao carregar dados do gráfico:", erro);
+            console.error("Erro ao carregar dados", erro);
         });
 
 
 
 
 
+    fetch(`/quiz/dados/${idUsuario}`)
+        .then(res => {
+            if (!res.ok) throw new Error("Erro na resposta do servidor");
+            return res.json();
+        })
+        .then(data => {
+            console.log("Dados recebidos:", data);
+
+            new Chart(document.getElementById("graficoquiz"), {
+                type: 'bar',
+                data: {
+                    labels: data.datas,
+                    datasets: [
+                        {
+                            label: 'Suas Últimas Pontuações',
+                            data: data.pontuacao,
+                            backgroundColor: '#00CED1'
+                        },
+                        {
+                            label: 'De outros Jogadores',
+                            data: data.pontuacaoutros,
+                            backgroundColor: '#96109b'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Pontuação'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Data da Jogada'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativo de Pontuações'
+                        },
+                        legend: {
+                            position: 'top'
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            console.error("Erro ao carregar dados do gráfico:", error);
+        });
+
+
+
+fetch(`/memoria/mendados/${idUsuario}`)
+        .then(res => {
+            if (!res.ok) throw new Error("Erro na resposta do servidor");
+            return res.json();
+        })
+        .then(data => {
+            console.log("Dados recebidos:", data);
+
+            new Chart(document.getElementById("graficomememoria"), {
+                type: 'line',
+                data: {
+                    labels: data.datas,
+                    datasets: [
+                        {
+                            label: 'Seus Últimos Tempos',
+                            data: data.tempo,
+                            backgroundColor: '#1E90FF'
+                        },
+                        {
+                            label: 'De outros Jogadores',
+                            data: data.tempoutros,
+                            backgroundColor: '#96109b'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Tempo'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Data da Jogada'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativo de Tempo'
+                        },
+                        legend: {
+                            position: 'top'
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => {
+            console.error("Erro ao carregar dados do gráfico:", error);
+        });
 
 </script>

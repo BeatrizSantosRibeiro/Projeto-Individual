@@ -37,11 +37,13 @@ const checkEndGame = () => {
 
     if (disableCards.length == 24) {
 
-        clearInterval(this.loop);
         setInterval(
-        alert(`Parabens, ${Spanplayer.innerHTML} você conseguiu! \n Seu tempo foi:${timer.innerHTML}`),
-       500 );
-
+            alert(`Parabens, ${Spanplayer.innerHTML} você conseguiu! \n Seu tempo foi:${timer.innerHTML} Segundos`),
+            alert(`Reiniciando jogo`),
+            500 );
+            location.reload();
+            clearInterval(this.loop);
+            
 
             fetch("/memoria/salvarmemoria", {
                 method: "POST",
@@ -175,7 +177,7 @@ const loadGame = () => {
 
     setTimeout(() => {
         allCards.forEach((card) => card.classList.remove('reveal-card'));
-    }, 2000);
+    }, 3000);
 
 }
 

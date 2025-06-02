@@ -116,11 +116,9 @@ header.rolagem #logo {
     width: 70px;
 }
 
-.container header {
-    display: flex;
-    width: 450px;
-    height: 500px;
-    background-color: #ffffff;
-    size:40px
-    /* backdrop-filter: blur(10px); */
+
+.caixa{
+    background-color:aquamarine;
+    width: 200px;
+    height: 200px;
 }

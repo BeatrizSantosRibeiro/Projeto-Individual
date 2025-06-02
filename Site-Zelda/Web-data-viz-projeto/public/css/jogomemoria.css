@@ -5,6 +5,10 @@
     font-family: 'triforce';
     letter-spacing: 2px;
 }
+body{
+    overflow: hidden;
+    margin: 0;
+}
 
 
 main{
@@ -28,7 +32,7 @@ header{
     padding: 30px;
     margin: 0 0 30px;
     border-radius: 15px;
-    margin: 20px;
+    margin: 14px;
     margin-left: 227.3px;
     font-family: 'MinishCap | v1.0';
 }
@@ -62,7 +66,6 @@ header{
     position: absolute;
     background-size: cover;
     background-position: center;
-    /* background-position-y: -13px; */
     border-radius: 10px ;
     border: 3px solid rgb(31, 29, 128);
     transition: all 500ms ease;
@@ -90,6 +93,15 @@ header{
 .disable-card {
     filter: saturate(0);
     opacity: 0.8;
+}
+
+#voltar{
+    background-color: rgba(91, 195, 201, 0.889);
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    margin-left: 300px;
+    
 }
 
     

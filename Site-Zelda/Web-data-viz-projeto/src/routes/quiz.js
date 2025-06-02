@@ -8,14 +8,16 @@ router.post("/salvarquiz", function (req, res) {
     quizController.salvarpontuacao(req, res);
 });
 
-router.get("/dados/:idUsuario", function (req, res) {
-    quizController.BuscarPontuacao(req, res);
-});
-
-
 router.get("/contarjogadas/:idUsuario", function (req, res) {
     quizController.contarJogadas(req, res);
 });
 
+router.get("/mediaPontuacaoes/:idUsuario", function (req, res) {
+    quizController.mediaPontuacaoes(req, res);
+});
+
+router.get("/dados/:idUsuario", function (req, res) {
+    quizController.dados(req, res);
+});
 
 module.exports = router;

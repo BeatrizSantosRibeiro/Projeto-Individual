@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 
@@ -30,25 +31,12 @@ body {
 }
 
 
-img {
-    margin-top: 10px;
-    margin-left: 10px;
-    height: 185px;
-    width: 115px;
-    transition: 2s;
-}
-
-
-#logo:hover {
-    content: url(../Imagens/logobotaohover.png);
-}
-
-
 .banner {
     background-image: url(/Imagens/index-login/giffundo3.gif);
     background-size: cover;
     /* margin-top: -48px; */
     height: 770px;
+    background-position: top;
 }
 
 
@@ -56,7 +44,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 154px;
 }
 
 
@@ -76,15 +64,6 @@ img {
 }
 
 
-footer {
-    display: flex;
-    color: white;
-    height: 70px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgba(35, 65, 9, 0.677);
-}
 
 
 span,h3{
@@ -93,7 +72,6 @@ span,h3{
     height: 60px;
     align-items: center;
     justify-content: center;
-    margin-top: -100px;
     border-radius: 16px;   
     font-family: "MinishCap | v1.0";
     letter-spacing: 4px;  

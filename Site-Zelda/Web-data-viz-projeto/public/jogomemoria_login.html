@@ -5,26 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/jogomemoria_login.css">
         <link rel="shortcut icon" type="imagex/png" href="/Imagens/icone5.png">
+    <link rel="stylesheet" href="./css/jogomemoria_login.css">
+
   
-    <script defer src="./JavaScript/jogomemoria_login.js"></script>
+
 </head>
 
 <body>
     
 
-    <form class="login-form">
+    <div class="login-form">
         <div class="login_header">
             <img src="./Imagens/imgloginjogomemoria.jpg" alt="">
             <h1>Jogo da Memória</h1>
         </div>
-        <input type="text" class="input_nome" placeholder="Nome">
-        <button type='submit' class="login_button" disabled> Play </button>
+       <button onclick="começar()" id="botao"> Começar </button>
 
-    </form>
+    </div>
 
 
 </body>
 
 </html>
+
+<script>
+function começar(){
+    
+     window.location.href = "jogodamemoria.html"; 
+}
+
+
+</script>

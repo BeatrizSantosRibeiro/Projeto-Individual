@@ -12,7 +12,6 @@ function salvarmemoria(tempo, fkUsuarios) {
 }
 
 
-
 function obterestatisticas(idUsuario) {
     var instrucao =
         `select tempo, date_format(data_jogada, '%d%m') as data
@@ -68,7 +67,43 @@ function mediamemoria(idUsuario) {
     return database.executar(instrucao);
 }
 
-// exportar as funções que criamos para serem vistas por outros arquivos
+
+
+function mendados(idUsuario) {
+    var instrucaoUsuario = `
+        SELECT DATE_FORMAT(data_jogada, '%d/%m') AS data, tempo
+        FROM TentativaMemoria
+        WHERE fkUsuarios = ${idUsuario}
+        ORDER BY data_jogada DESC
+        LIMIT 5;
+    `;
+
+    var instrucaoOutros = `
+        SELECT tempo as tempoutros
+        FROM TentativaMemoria
+        WHERE fkUsuarios != ${idUsuario}
+        ORDER BY data_jogada DESC
+        LIMIT 5;
+    `;
+
+    console.log("Executando SQL para usuário:\n" + instrucaoUsuario);
+    console.log("Executando SQL para outros jogadores:\n" + instrucaoOutros);
+
+    // Executa os dois SQLs em paralelo
+    return Promise.all([
+        database.executar(instrucaoUsuario),
+        database.executar(instrucaoOutros)
+    ]).then(([resUsuario, resOutros]) => {
+        return {
+            tempo: resUsuario.map(r => r.tempo),
+            datas: resUsuario.map(r => r.data),
+            tempoutros: resOutros.map(r => r.tempoutros)
+        };
+    });
+}
+
+
+
 
 module.exports = {
     salvarmemoria,
@@ -76,5 +111,6 @@ module.exports = {
     ultimotemporegis,
     ultimapontuacaoregis,
     contarJogadasmemo,
-    mediamemoria
+    mediamemoria,
+    mendados
 };
