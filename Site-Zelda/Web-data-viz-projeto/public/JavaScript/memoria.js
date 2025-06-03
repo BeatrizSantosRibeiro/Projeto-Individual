@@ -19,20 +19,19 @@ const caracterer = [
 ]
 
 
-// para facilitar:
-    const createElement = (tag, className) => {
+const createElement = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
     return element;
 }
 
-
-// let porque mudam ao longo do script 
+ 
 let firstCard = '';
 let secondCard = '';
 
+
 const checkEndGame = () => {
-    // pega todos os elementos e salva em um array 
+
     const disableCards = document.querySelectorAll('.face.disable-card');
 
     if (disableCards.length == 24) {
@@ -40,45 +39,45 @@ const checkEndGame = () => {
         setInterval(
             alert(`Parabens, ${Spanplayer.innerHTML} você conseguiu! \n Seu tempo foi:${timer.innerHTML} Segundos`),
             alert(`Reiniciando jogo`),
-            500 );
-            location.reload();
-            clearInterval(this.loop);
-            
+            500);
+        location.reload();
+        clearInterval(this.loop);
 
-            fetch("/memoria/salvarmemoria", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    // crie um atributo que recebe o valor recuperado aqui
-                    // Agora vá para o arquivo routes/usuario.js
-                    timerServer: timer.innerHTML,
-                    fkUsuariosServer: sessionStorage.ID_USUARIO
-                    
-                }),
-            })
+
+        fetch("/memoria/salvarmemoria", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+
+                timerServer: timer.innerHTML,
+                fkUsuariosServer: sessionStorage.ID_USUARIO
+
+            }),
+        })
             .then(function (resposta) {
                 console.log("resposta: ", resposta);
-                
+
             })
-            
+
             .catch(function (resposta) {
                 console.log(`#ERRO: ${resposta}`);
-                
+
                 loadGame();
-                
+
             });
-            
-    }}
+
+    }
+}
 
 const checkCards = () => {
-    // recuperando os valores atribuidos no let (lá em baixo) 
+
     const firstcaractere = firstCard.getAttribute('data-caracterer');
     const secondcaractere = secondCard.getAttribute('data-caracterer');
 
     if (firstcaractere === secondcaractere) {
-        // para ficar com a class(css) so na frente, colocar a class na primeira filha da carta(firstChild); 
+
         firstCard.firstChild.classList.add('disable-card');
         secondCard.firstChild.classList.add('disable-card');
 
@@ -89,24 +88,22 @@ const checkCards = () => {
     }
 
     else {
-        // reveal card vira a carta, se tirar ela volta ao normal (se a pessoa errou) 
 
         setTimeout(() => {
-            // pra dar um tempo antes de virar 
+
             firstCard.classList.remove('reveal-card');
             secondCard.classList.remove('reveal-card');
 
             firstCard = '';
             secondCard = '';
-            
+
         }, 500);
 
-    }}
+    }
+}
 
 
-// criando a variavel do revelcard de baixo 
 const revealCard = ({ target }) => {
-
 
     if (target.parentNode.className.includes('reveal-card')) {
         return;
@@ -126,26 +123,19 @@ const revealCard = ({ target }) => {
 
 }
 
-
 const createCard = (caracterer) => {
-    // criando elementos
-    // const card = document.createElement('div');
-    // const front = document.createElement('div');
-    // const back = document.createElement('div');
 
-    // forma facilitada de criar o elemento com a const criada acima
     const card = createElement('div', 'card');
     const front = createElement('div', 'face front');
     const back = createElement('div', 'face back');
 
-    // mexe no css do front, para ficar com imagens diferentes nos cards sem precisar colocar um por um e ser uma forma aleatoria 
+
     front.style.backgroundImage = `url('../Imagens/imagem-jogomemoria/${caracterer}.png')`;
 
     card.appendChild(front);
     card.appendChild(back);
-    // em cima estão StylePropertyMapReadOnly, aqui está juntando os divs
 
-    card.addEventListener('click', revealCard) // colocar o evento de virar ao ser clicado(css)
+    card.addEventListener('click', revealCard)
 
     card.setAttribute('data-caracterer', caracterer);
 
@@ -155,14 +145,11 @@ const createCard = (caracterer) => {
 
 const loadGame = () => {
 
-    //    duplicar os card: Poderia ser feita copiando os elementos do array, porém essa é uma forma mais eficiente, já que não fica repetindo código
-    const duplicatecaracterer = [...caracterer, ...caracterer]  // espalhou os elementos do arrays em outro array 
+    const duplicatecaracterer = [...caracterer, ...caracterer] 
 
-    const shuffledArray = duplicatecaracterer.sort(() => Math.random() - 0.5); // ordena elementos em ordem alfabética. como match ele aliatoriza numero, subtraindo o 0.5 todo numero menor que isso vai ser negativo, que é o q precisa aqui , positivo e negativo
+    const shuffledArray = duplicatecaracterer.sort(() => Math.random() - 0.5); 
 
-
-    // espera receber uma função como parametro
-    // foreach vai percorrer os arrays que já está duplicado e embaralhado, ao invés do outro(caracterer)
+ 
     shuffledArray.forEach((caracterer) => {
         // forEach vai criar varias cartas
         const card = createCard(caracterer);
@@ -171,7 +158,7 @@ const loadGame = () => {
 
     const allCards = document.querySelectorAll('.card');
 
-     setTimeout(() => {
+    setTimeout(() => {
         allCards.forEach((card) => card.classList.add('reveal-card'));
     }, 300);
 
@@ -182,27 +169,22 @@ const loadGame = () => {
 }
 
 const StartTimer = () => {
-    //this é uma chave para conseguir acessar em outra função(endgame), como se fosse um id 
+
     this.loop = setInterval(() => {
 
-        // tempo atual é o que está dentro do innerhtml 
         const currentTime = Number(timer.innerHTML);
 
         timer.innerHTML = currentTime + 1;
 
-
     }, 1000);
 }
 
-// executa alguma coisa quando a janela tiver carregada
+
 window.onload = () => {
 
-
-
-    // pegar o nome do localstorage que o usuario colocou 
     const playerName = localStorage.getItem('player');
-    // getIten recupera valor 
-      Spanplayer.innerHTML = sessionStorage.NOME_USUARIO;
+
+    Spanplayer.innerHTML = sessionStorage.NOME_USUARIO;
     StartTimer();
     loadGame();
 }

@@ -17,8 +17,6 @@ function salvartimer(req, res) {
 }
 
 
-
-
 function obterestatisticas(req, res) {
     var idUsuario = req.params.idUsuario;
 

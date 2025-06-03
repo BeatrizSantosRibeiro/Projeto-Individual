@@ -21,7 +21,7 @@
                 <li>
                     <a href="login.html" id="agora"> Login
                         <a href="cadastro.html" > Cadastrar
-                            <a href="sobre.html" id="">Sobre mim</a>
+                            <a href="sobremim.html" id="">Sobre mim</a>
                 </li>
             </div>
 
@@ -68,7 +68,6 @@
         }
 
 
-
         else {
             setInterval(sumirMensagem, 5000)
         }
@@ -101,13 +100,13 @@
 
                     setTimeout(function () {
                         window.location = "index_login.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 500);
 
                 });
 
             } else {
 
-                mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o login!";
+                mensagem_erro.innerHTML = "Email ou Senha incoreto.";
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {

@@ -66,49 +66,174 @@ const questions = [
         ]
     },
 
-        {
-        question: "O que é um 'Guardião'?",
-        answers: [
-            { id: 1, texto: "Um inseto esquisito", correct: false },
-            { id: 2, texto: "Uma aranha que lança teias", correct: false },
-            { id: 3, texto: "Um automato que dispara laseres", correct: true },
-            { id: 4, texto: "Um demonio", correct: false },
-            { id: 5, texto: "Calamit Ganon", correct: false }
-        ]
-    },
+//         {
+//         question: "O que é um 'Guardião'?",
+//         answers: [
+//             { id: 1, texto: "Um inseto esquisito", correct: false },
+//             { id: 2, texto: "Uma aranha que lança teias", correct: false },
+//             { id: 3, texto: "Um automato que dispara laseres", correct: true },
+//             { id: 4, texto: "Um demonio", correct: false },
+//             { id: 5, texto: "Calamit Ganon", correct: false }
+//         ]
+//     },
 
     
-        {
-        question: "Para que serviam as Bestas Divinas e os Guardiões?",
-        answers: [
-            { id: 1, texto: "Para ajudar Calamit Ganon a tomar conta de tudo", correct: false },
-            { id: 2, texto: "Para ajudar a derrotar Calamit Ganon", correct: true },
-            { id: 3, texto: "Para atacar qualquer ser vivo", correct: false },
-            { id: 4, texto: "Para ajudar zelda a despertar seu poder divino", correct: false },
-        ]
-    },
+//         {
+//         question: "Para que serviam as Bestas Divinas e os Guardiões?",
+//         answers: [
+//             { id: 1, texto: "Para ajudar Calamit Ganon a tomar conta de tudo", correct: false },
+//             { id: 2, texto: "Para ajudar a derrotar Calamit Ganon", correct: true },
+//             { id: 3, texto: "Para atacar qualquer ser vivo", correct: false },
+//             { id: 4, texto: "Para ajudar zelda a despertar seu poder divino", correct: false },
+//         ]
+//     },
 
-     {
-        question: "O que é 'Sheikah Slate?'",
-        answers: [
-            { id: 1, texto: "Uma chave importante do castelo de Hyrule", correct: false },
-            { id: 2, texto: "Um coração para a batalha final", correct: false },
-            { id: 3, texto: "Um tablet misterioso, que dá a link uma espécie de poder", correct: true },
-            { id: 4, texto: "Uma pintura", correct: false },
-        ]
-    },
+//      {
+//         question: "O que é 'Sheikah Slate?'",
+//         answers: [
+//             { id: 1, texto: "Uma chave importante do castelo de Hyrule", correct: false },
+//             { id: 2, texto: "Um coração para a batalha final", correct: false },
+//             { id: 3, texto: "Um tablet misterioso, que dá a link uma espécie de poder", correct: true },
+//             { id: 4, texto: "Uma pintura", correct: false },
+//         ]
+//     },
 
-      {
-        question: "Afinal, o que foi a 'Grande calamidade'?",
-        answers: [
-            { id: 1, texto: "Foi quando o Ganondorf ficou rei de Hyrule", correct: false },
-            { id: 2, texto: "Não existiu", correct: false },
-            { id: 3, texto: "Foi quando Zelda desapareceu", correct: false },
-            { id: 4, texto: "Foi quando Hyrule foi atacada e todos os campeões, com excesão de Link, morreram", correct: true },
-        ]
-    },
+//       {
+//         question: "Afinal, o que foi a 'Grande calamidade'?",
+//         answers: [
+//             { id: 1, texto: "Foi quando o Ganondorf ficou rei de Hyrule", correct: false },
+//             { id: 2, texto: "Não existiu", correct: false },
+//             { id: 3, texto: "Foi quando Zelda desapareceu", correct: false },
+//             { id: 4, texto: "Foi quando Hyrule foi atacada e todos os campeões, morreram", correct: true },
+//         ]
+//     },
+//   {
+
+//         question: "Qual é o nome do reino principal em The Legend of Zelda?",
+//         answers: [
+//             { id: 1, texto: "Lorule", correct: false },
+//             { id: 2, texto: "Kakariko", correct: false },
+//             { id: 3, texto: "Hyrule", correct: true },
+//             { id: 4, texto: "Gerundo", correct: false },
+//         ]
+//     },
+
+
+//       {
+//         question: "Qual é o nome da espada lendária empunhada por Link?",
+//         answers: [
+//             { id: 1, texto: "Dark Sword", correct: false },
+//             { id: 2, texto: "Hero's Blade", correct: false },
+//             { id: 3, texto: "Shadow Saber", correct: false },
+//             { id: 4, texto: "Master Sword", correct: true },
+//         ]
+//     },
+
+    
+//     {
+//       question: "Qual é o objetivo principal do Clã Yiga em Breath of the Wild?",
+//       answers: [
+//           { id: 1, texto: "Ajudar Link na missão", correct: false },
+//           { id: 2, texto: "Proteger Hyrule", correct: false },
+//           { id: 3, texto: "Servir Calamity Ganon", correct: true },
+//           { id: 4, texto: "Coletar rupees", correct: false },
+//       ]
+//   },
+
+//       {
+//         question: "Em Breath of the Wild, o que Link pode usar para planear (voar)?",
+//         answers: [
+//             { id: 1, texto: "Pégaso", correct: false },
+//             { id: 2, texto: "Paravento", correct: false },
+//             { id: 3, texto: "Planador", correct: true },
+//             { id: 4, texto: "Asas Sheikah", correct: false },
+//         ]
+//     },
+
+
+//       {
+//         question: "O que a Triforce representa?",
+//         answers: [
+//             { id: 1, texto: "Coragem, sabedoria e força", correct: true },
+//             { id: 2, texto: "Força, magia e paz", correct: false },
+//             { id: 3, texto: "Terra, fogo e água", correct: false },
+//             { id: 4, texto: "Vida, morte e tempo", correct: false },
+//         ]
+//     },
+    
+//         {
+//         question: "Qual povo vive na Montanha da Morte?",
+//         answers: [
+//             { id: 1, texto: "Zora", correct: false },
+//             { id: 2, texto: "Sheikah", correct: false },
+//             { id: 3, texto: "Gerudo", correct: false },
+//             { id: 4, texto: "Goron", correct: true },
+//         ]
+//     },
+
+//     {
+//        question: "Como os membros do Clã Yiga costumam se disfarçar?",
+//        answers: [
+//            { id: 1, texto: "Como animais selvagens", correct: false },
+//            { id: 2, texto: "Como viajantes comuns", correct: true },
+//            { id: 3, texto: "Como guardiões", correct: false },
+//            { id: 4, texto: "Como Sheikahs", correct: false },
+//        ]
+//    },
+    
+//      {
+//         question: "Os Zora vivem em qual ambiente?",
+//         answers: [
+//             { id: 1, texto: "Montanhas", correct: false },
+//             { id: 2, texto: "Vulcões", correct: false },
+//             { id: 3, texto: "Regiões aquáticas", correct: true },
+//             { id: 4, texto: "Florestas", correct: false },
+//         ]
+//     },
+
+//     {
+//         question: "Quem é o criador original da franquia The Legend of Zelda?",
+//         answers: [
+//             { id: 1, texto: "Hideo Kojima", correct: false },
+//             { id: 2, texto: "Shigeru Miyamoto", correct: true },
+//             { id: 3, texto: "Satoru Iwata", correct: false },
+//             { id: 4, texto: "Masahiro Sakurai", correct: false },
+//         ]
+//     },
+
+//      {
+//         question: "Qual desses personagens NÃO é um campeão em Breath of the Wild?",
+//         answers: [
+//             { id: 1, texto: "Rauru", correct: true },
+//             { id: 2, texto: "Revali", correct: false },
+//             { id: 3, texto: "Daruk", correct: false },
+//             { id: 4, texto: "Urbosa", correct: false },
+//         ]
+//     },
+
+//      {
+//         question: "O que são as Koroks em Breath of the Wild?",
+//         answers: [
+//             { id: 1, texto: "Espíritos malignos", correct: false },
+//             { id: 2, texto: "Criaturas que protegem Ganon", correct: false },
+//             { id: 3, texto: "Inimigos secretos", correct: false },
+//             { id: 4, texto: "Seres da floresta que recompensam Link", correct: true },
+//         ]
+//     },
+
+
+//      {
+//         question: "Quem é o líder do Clã Yiga?",
+//         answers: [
+//             { id: 1, texto: "Master Kohga", correct: true },
+//             { id: 2, texto: "Impa", correct: false },
+//             { id: 3, texto: "Ganon", correct: false },
+//             { id: 4, texto: "Revali", correct: false },
+//         ]
+//     },
 
 ]
+
 const questionElement = document.getElementById("question");
 const answersButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -125,9 +250,9 @@ function startQuiz() {
 
 }
 
-function resetState() { // botão para proxima pergunta vai estar sempre escondido e remove todos os botões.
+function resetState() {
     nextButton.style.display = "none";
-    // garante que a cada nova questão todos os elementos sejam excluidos
+   
     while (answersButtons.firstChild) {
         answersButtons.removeChild(answersButtons.firstChild);
     }
@@ -139,23 +264,23 @@ function showQuestion() {
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + " . " + currentQuestion.question;
 
-    // para cada resposta vai criar os botões de forma dinamica
+   
     currentQuestion.answers.forEach((answers) => {
-        // answers da lista vai ser substituido por esses botões criados
+        
         const button = document.createElement("button");
         button.innerHTML = answers.texto;
         button.dataset.id = answers.id;
         button.classList.add("btn");
         answersButtons.appendChild(button);
 
-        // associa um evento de click na questão e se ela esá certa ou não
+      
         button.addEventListener("click", selectAnswer);
     });
 }
-// função recebendo o evento e
+
 
 function selectAnswer(e) {
-    // pega as respostas da pergunta atual e le qual resposta está certa 
+   
     const answers = questions[currentQuestionIndex].answers;
 
     const correctAnswer = answers.filter((answer) => answer.correct == true)[0];
@@ -171,7 +296,7 @@ function selectAnswer(e) {
         selectBtn.classList.add("incorrect");
     }
 
-    // trava os botões e aparecer o botão para proxima questão
+  
     Array.from(answersButtons.children).forEach((button) => {
         if (button.dataset.id == correctAnswer.id){
             button.classList.add("correct");
@@ -180,26 +305,38 @@ function selectAnswer(e) {
         button.disabled = true;
     });
 
-    // aparece o botão 
     nextButton.style.display = "block"
 
 }
 
+
+
 function showScore() {
     resetState();
 
-    if(pontuacao < 5){
-        questionElement.innerHTML = `nãããão <br>Voce acertou ${pontuacao} de ${questions.length}!<Br>
-        Precisa melhorar`;
+    if(pontuacao <= 5){
+        questionElement.innerHTML = `nãããão.... <br>Voce acertou ${pontuacao} de ${questions.length}!<Br>
+        Precisa melhorar!`;
+    }
+    
+    else if(pontuacao < 7){
+        questionElement.innerHTML = `<br>Voce acertou ${pontuacao} de ${questions.length}!<br>
+        ! Está no caminho certo.`;
     }
 
-    else if(pontuacao <= 9){
-        questionElement.innerHTML = `Parabéns <br>Voce acertou ${pontuacao} de ${questions.length}!`;
-    }
+    // else if(pontuacao < 10){
+    //     questionElement.innerHTML = `<br>Voce acertou ${pontuacao} de ${questions.length}!<br>
+    //     metade! Está no caminho certo.`;
+    // }
+
+    // else if(pontuacao <= 16){
+    //     questionElement.innerHTML = `Parabéns! <br>Voce acertou ${pontuacao} de ${questions.length}!`;
+    // }
 
     else{
-         questionElement.innerHTML = `Parabéns você realmente sabe sobre o jogo<br>Voce acertou ${pontuacao} de ${questions.length}!`;
+         questionElement.innerHTML = `Voce acertou ${pontuacao} de ${questions.length}!<br>Parabéns você realmente sabe bastante sobre o jogo`;
     }
+
     nextButton.innerHTML = "Finalizar e salvar";
     nextButton.style.display = "block";
 
@@ -221,7 +358,6 @@ function handleNextButton() {
 }
 
 
-// adicionar um evento no botão 
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         handleNextButton();
@@ -234,8 +370,6 @@ nextButton.addEventListener("click", () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 pontuacaoServer: pontuacao,
                 fkUsuariosServer: sessionStorage.ID_USUARIO
                 

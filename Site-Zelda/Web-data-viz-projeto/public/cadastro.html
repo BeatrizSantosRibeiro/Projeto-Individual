@@ -23,7 +23,7 @@
         <li>
           <a href="login.html"> Login
             <a href="cadastro.html" id="agora"> Cadastrar
-              <a href="sobre.html" id="">Sobre mim</a>
+              <a href="sobremim.html" id="">Sobre mim</a>
         </li>
       </div>
 
@@ -62,15 +62,9 @@
 
   }
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listausuariosCadastrados = [];
-
   function cadastrar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = input_nome.value;
+ 
+ nomeVar = input_nome.value;
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_confirsenha.value;
@@ -85,31 +79,35 @@
     ) {
 
       mensagem =
-        "Por favor preencha todos os campos.";
+        "Por favor preencha todos os campos."
+      }
 
-    
-      // finalizarAguardar();
+
+      else if (emailVar.includes("@") == false || emailVar.includes(".") == false) {
+        mensagem = '<b> Email inválido!</b>'
+        
     }
 
-    else if (emailVar.includes("@") == false || emailVar.includes(".") == false) {
-      mensagem = '<b> Email inválido!</b>'
+
+    else if (senhaVar.includes("!") == false && senhaVar.includes("@") == false && senhaVar.includes("#") == false && senhaVar.includes("$") == false && senhaVar.includes("%") == false && senhaVar.includes("&") == false && senhaVar.includes("*") == false ) {
+
+      mensagem = `<b> Senha Inválida. </b> <br> Nescessário ter mais de 8 caracteres e no mínimo um caractere especial. `
+      
     }
 
-    else if (senhaVar.includes("!") == false && senhaVar.includes("@") == false && senhaVar.includes("#") == false && senhaVar.includes("$") == false && senhaVar.includes("%") == false && senhaVar.includes("&") == false && senhaVar.includes("*") == false) {
-
-      mensagem = `<b> Senha Inválida. </b> <br> Nescessário ter no mínimo um caractere especial. `
-    }
 
     else if (senhaVar.length < 8) {
-      mensagem = '<b> Senha Inválida. </b> <br>.Nescessário ter no Mínimo 8 caracteres.'
+      mensagem = '<b> Senha Inválida. </b> <br> Nescessário ter no Mínimo 8 caracteres.'
+       
     }
 
 
     else if ((senhaVar == confirmacaoSenhaVar) == false) {
-      mensagem = 'Erro de confirmação de senha.';
+      mensagem = ' <b>Erro de confirmação de senha. </b>';
 
     }
 
+    
     if (mensagem != '') {
       mensagem_erro.innerHTML = mensagem
       return;

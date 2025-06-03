@@ -89,11 +89,11 @@ header{
 }
 
 
-/* quando a pessoa acertar  */
 .disable-card {
     filter: saturate(0);
     opacity: 0.8;
 }
+
 
 #voltar{
     background-color: rgba(91, 195, 201, 0.889);

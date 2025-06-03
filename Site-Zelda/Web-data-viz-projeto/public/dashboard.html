@@ -198,7 +198,6 @@
 
 
 
-
     fetch(`/quiz/dados/${idUsuario}`)
         .then(res => {
             if (!res.ok) throw new Error("Erro na resposta do servidor");
@@ -225,7 +224,6 @@
                     ]
                 },
                 options: {
-                    responsive: true,
                     scales: {
                         y: {
                             beginAtZero: true,
@@ -285,7 +283,6 @@ fetch(`/memoria/mendados/${idUsuario}`)
                     ]
                 },
                 options: {
-                    responsive: true,
                     scales: {
                         y: {
                             beginAtZero: true,
